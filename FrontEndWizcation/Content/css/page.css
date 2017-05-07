@@ -1,0 +1,10 @@
+﻿body {
+        border: 0px;
+}
+
+#msisdn {
+    border: 1px solid red;
+    height: 50px;
+    width: 50px
+
+}
