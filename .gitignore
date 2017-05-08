@@ -248,13 +248,6 @@ ModelManifest.xml
 *.dll
 *.csproj.user
 *.csproj
-AmazonOnline.dll
-VTECSystem.csproj
-/VTECSystem/VTECSystem/PDF/FULLTax2563_884.pdf
-/VTECSystem/VTECSystem/PDF/FULLTax2561_884.pdf
-/VTECSystem/VTECSystem/PDF/FULLTax2560_884.pdf
-/VTECSystem/VTECSystem/PDF/FULLTax2559_884.pdf
-/VTECSystem/VTECSystem/PDF/FULLTax2558_884.pdf
-/VTECSystem/VTECSystem/PDF/FULLTax2557_884.pdf
-/VTECSystem/VTECSystem/PDF/FULLTax2556_884.pdf
-/VTECSystem/VTECSystem/PDF/FULLTax2553_884.pdf
+*.suo
+FrontEndWizcation.dll
+KKWeb.csproj

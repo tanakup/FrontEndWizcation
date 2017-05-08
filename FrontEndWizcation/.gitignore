@@ -257,5 +257,6 @@ paket-files/
 *.dll
 *.csproj.user
 *.csproj
-AmazonOnline.dll
-VTECSystem.csproj
+*.suo
+FrontEndWizcation.dll
+KKWeb.csproj
