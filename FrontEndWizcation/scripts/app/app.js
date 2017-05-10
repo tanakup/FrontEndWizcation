@@ -1,6 +1,7 @@
 ﻿// Make sure to include the `ui.router` module as a dependency
 angular.module('Wizcation', [
   'ui.router',
+  'oc.lazyLoad'
 ])
 
 .run(
@@ -18,24 +19,11 @@ angular.module('Wizcation', [
 )
 
 .config(
-  ['$stateProvider', '$urlRouterProvider',
-    function ($stateProvider, $urlRouterProvider) {
+  ['$stateProvider', '$urlRouterProvider', '$ocLazyLoadProvider',
+    function ($stateProvider, $urlRouterProvider, $ocLazyLoadProvider) {
 
-        /////////////////////////////
-        // Redirects and Otherwise //
-        /////////////////////////////
-
-        // Use $urlRouterProvider to configure any redirects (when) and invalid urls (otherwise).
-        $urlRouterProvider
-
-          // The `when` method says if the url is ever the 1st param, then redirect to the 2nd param
-          // Here we are just setting up some convenience urls.
-          .when('/c?id', '/contacts/:id')
-          .when('/user/:id', '/contacts/:id')
-
-          // If the url is ever invalid, e.g. '/asdf', then redirect to '/' aka the home state
-          .otherwise('/');
-
+     
+        $urlRouterProvider.otherwise("/")
 
         //////////////////////////
         // State Configurations //
@@ -43,51 +31,48 @@ angular.module('Wizcation', [
 
         // Use $stateProvider to configure your states.
         $stateProvider
-
-          //////////
-          // Home //
-          //////////
-
-          .state("home", {
-
-              // Use a url of "/" to set a state as the "index".
+          .state('Home', {
               url: "/",
-
-              // Example of an inline template string. By default, templates
-              // will populate the ui-view within the parent state's template.
-              // For top level states, like this one, the parent template is
-              // the index.html file. So this template will be inserted into the
-              // ui-view within index.html.
-              template: '<p class="lead">Welcome to the UI-Router Demo</p>' +
-                '<p>Use the menu above to navigate. ' +
-                'Pay attention to the <code>$state</code> and <code>$stateParams</code> values below.</p>' +
-                '<p>Click these links—<a href="#/c?id=1">Alice</a> or ' +
-                '<a href="#/user/42">Bob</a>—to see a url redirect in action.</p>'
-
+              templateUrl: '\Home/Content',
+              resolve: {
+                  lazyLoad: ['$ocLazyLoad', function ($ocLazyLoad) {
+                      return $ocLazyLoad.load([
+                           {
+                               name: 'Salereport',
+                               files: ['scripts/app/Hotel.js']
+                           },
+                      ])
+                  }]
+              }
           })
-
-          ///////////
-          // About //
-          ///////////
-
-          .state('about', {
-              url: '/about',
-
-              // Showing off how you could return a promise from templateProvider
-              templateProvider: ['$timeout',
-                function ($timeout) {
-                    return $timeout(function () {
-                        return '<p class="lead">UI-Router Resources</p><ul>' +
-                                 '<li><a href="https://github.com/angular-ui/ui-router/tree/legacy/sample">Source for this Sample</a></li>' +
-                                 '<li><a href="https://github.com/angular-ui/ui-router">GitHub Main Page</a></li>' +
-                                 '<li><a href="https://github.com/angular-ui/ui-router#quick-start">Quick Start</a></li>' +
-                                 '<li><a href="https://github.com/angular-ui/ui-router/wiki">In-Depth Guide</a></li>' +
-                                 '<li><a href="https://github.com/angular-ui/ui-router/wiki/Quick-Reference">API Reference(old)</a></li>' +
-                                 '<li><a href="http://angular-ui.github.io/ui-router/site">Documentation</a></li>' +
-                               '</ul>';
-                    }, 100);
+               .state('Hotel', {
+                   url: "/hotel",
+                   templateUrl: '\Hotel/Index',
+                   resolve: {
+                       lazyLoad: ['$ocLazyLoad', function ($ocLazyLoad) {
+                           return $ocLazyLoad.load([
+                                {
+                                    name: 'Salereport',
+                                    files: ['scripts/app/Hotel.js']
+                                },
+                           ])
+                       }]
+                   }
+               })
+        .state('CompanyOverview', {
+            url: "/rr",
+            templateUrl: '\Home/About',
+            resolve: {
+                lazyLoad: ['$ocLazyLoad', function ($ocLazyLoad) {
+                    return $ocLazyLoad.load([
+                         {
+                             name: 'Salereport',
+                             files: ['scripts/app/Hotel.js']
+                         },
+                    ])
                 }]
-          })
+            }
+        })
     }
   ]
 );
