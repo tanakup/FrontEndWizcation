@@ -10,8 +10,8 @@ namespace FrontEndWizcation.Modules.ConnectDB
 
     public class DBHelper
     {
-        private static string szDbUser = "vtecPOS";
-        private static string szDbPassword = "vtecpwnet";
+        private static string szDbUser = "wiz";
+        private static string szDbPassword = "w!zc@t!0n";
         private static string DBServer = "163.44.196.143";
         private static string DBName = "WizBE";
         public static SqlConnection ConnectDb(ref string errMsg)
