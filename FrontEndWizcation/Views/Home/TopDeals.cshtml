@@ -86,50 +86,15 @@
             <!-- Carousel -->
             <div class="wrapper">
                 <div class="list_carousel">
-                    <ul id="foo2">
+                    <ul ng-repeat="n in ListHotel">
                         <li>
                             <a href="list4.html"><img src="\Template/images/thumb-africa.jpg" alt="" /></a>
                             <div class="m1">
-                                <h6 class="lh1 dark"><b>South Africa Adventures</b></h6>
-                                <h6 class="lh1 green">Save up to 30%</h6>
+                                <h6 class="lh1 dark"><b>{{n.HotelName}}</b></h6>
+                                <h6 class="lh1 green">{{n.BusinessRegisterNumber}}</h6>
                             </div>
                         </li>
-                        <li>
-                            <a href="list4.html"><img src="\Template/images/thumb-egipt.jpg" alt="" /></a>
-                            <div class="m1">
-                                <h6 class="lh1 dark"><b>Egipt</b></h6>
-                                <h6 class="lh1 green">Save up to 30%</h6>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="list4.html"><img src="\Template/images/thumb-machupicchu.jpg" alt="" /></a>
-                            <div class="m1">
-                                <h6 class="lh1 dark"><b>Machu Picchu</b></h6>
-                                <h6 class="lh1 green">Save up to 30%</h6>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="list4.html"><img src="\Template/images/thumb-africa.jpg" alt="" /></a>
-                            <div class="m1">
-                                <h6 class="lh1 dark"><b>South Africa Adventures</b></h6>
-                                <h6 class="lh1 green">Save up to 30%</h6>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="list4.html"><img src="\Template/images/thumb-egipt.jpg" alt="" /></a>
-                            <div class="m1">
-                                <h6 class="lh1 dark"><b>Egipt</b></h6>
-                                <h6 class="lh1 green">Save up to 30%</h6>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="list4.html"><img src="\Template/images/thumb-machupicchu.jpg" alt="" /></a>
-                            <div class="m1">
-                                <h6 class="lh1 dark"><b>Machu Picchu</b></h6>
-                                <h6 class="lh1 green">Save up to 30%</h6>
-                            </div>
-                        </li>
-                    </ul>
+                       </ul>
                     <div class="clearfix"></div>
                     <a id="prev_btn2" class="prev" href="#"><img src="\Template/images/spacer.png" alt="" /></a>
                     <a id="next_btn2" class="next" href="#"><img src="\Template/images/spacer.png" alt="" /></a>
