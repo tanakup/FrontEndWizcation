@@ -145,6 +145,7 @@
     <Content Include="scripts\ai.0.15.0-build58334.js" />
     <Content Include="scripts\ai.0.15.0-build58334.min.js" />
     <Content Include="scripts\angular_libary\angular-sanitize.min.js" />
+    <Content Include="scripts\angular_libary\angular-ui-router.min.js" />
     <Content Include="scripts\angular_libary\angular.min.js" />
     <Content Include="scripts\angular_libary\i18n\angular-locale_af-na.js" />
     <Content Include="scripts\angular_libary\i18n\angular-locale_af-za.js" />
@@ -875,6 +876,8 @@
     <Content Include="scripts\angular_libary\i18n\angular-locale_zh.js" />
     <Content Include="scripts\angular_libary\i18n\angular-locale_zu-za.js" />
     <Content Include="scripts\angular_libary\i18n\angular-locale_zu.js" />
+    <Content Include="scripts\app\app.js" />
+    <Content Include="scripts\app\Hotel.js" />
     <Content Include="scripts\app\Page.js" />
     <Content Include="scripts\bootstrap.js" />
     <Content Include="scripts\bootstrap.min.js" />
@@ -1486,6 +1489,7 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Content.cshtml" />
+    <Content Include="Views\Home\TopDeals.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

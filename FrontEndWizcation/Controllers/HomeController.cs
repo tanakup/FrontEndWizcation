@@ -9,6 +9,10 @@ namespace FrontEndWizcation.Controllers
     public class HomeController : Controller
     {
         // GET: Home
+        public ActionResult TopDeals()
+        {
+            return View();
+        }
         public ActionResult Index()
         {
             return View();
