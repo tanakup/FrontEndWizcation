@@ -1,7 +1,8 @@
 ﻿// Make sure to include the `ui.router` module as a dependency
 angular.module('Wizcation', [
   'ui.router',
-  'oc.lazyLoad'
+  'oc.lazyLoad',
+  'pascalprecht.translate',
 ])
 
 .run(
@@ -17,19 +18,15 @@ angular.module('Wizcation', [
     }
   ]
 )
-
+     .config(['$locationProvider', function($locationProvider) {
+         $locationProvider.hashPrefix('');
+     }])
 .config(
   ['$stateProvider', '$urlRouterProvider', '$ocLazyLoadProvider',
     function ($stateProvider, $urlRouterProvider, $ocLazyLoadProvider) {
 
-     
         $urlRouterProvider.otherwise("/")
 
-        //////////////////////////
-        // State Configurations //
-        //////////////////////////
-
-        // Use $stateProvider to configure your states.
         $stateProvider
           .state('Home', {
               url: "/",
@@ -38,35 +35,53 @@ angular.module('Wizcation', [
                   lazyLoad: ['$ocLazyLoad', function ($ocLazyLoad) {
                       return $ocLazyLoad.load([
                            {
-                               name: 'Salereport',
-                               files: ['scripts/app/Hotel.js']
+                               name: 'Home',
+                               files: [
+                                   'scripts/app/Hotel.js',
+                                   'scripts/Lang/en.json',
+                                   'scripts/Lang/th.json',
+                               ]
                            },
                       ])
                   }]
               }
           })
-               .state('Hotel', {
+              .state('Hotel', {
                    url: "/hotel",
                    templateUrl: '\Hotel/Index',
                    resolve: {
                        lazyLoad: ['$ocLazyLoad', function ($ocLazyLoad) {
                            return $ocLazyLoad.load([
                                 {
-                                    name: 'Salereport',
+                                    name: 'Hotel',
                                     files: ['scripts/app/Hotel.js']
                                 },
                            ])
                        }]
                    }
                })
+              .state('Activities', {
+                  url: "/activities",
+                  templateUrl: '\Activities/Index',
+                  resolve: {
+                      lazyLoad: ['$ocLazyLoad', function ($ocLazyLoad) {
+                          return $ocLazyLoad.load([
+                               {
+                                   name: 'Activities',
+                                   files: ['scripts/app/Hotel.js']
+                               },
+                          ])
+                      }]
+                  }
+              })
         .state('CompanyOverview', {
-            url: "/rr",
+            url: "/CompanyOverview",
             templateUrl: '\Home/About',
             resolve: {
                 lazyLoad: ['$ocLazyLoad', function ($ocLazyLoad) {
                     return $ocLazyLoad.load([
                          {
-                             name: 'Salereport',
+                             name: 'CompanyOverview',
                              files: ['scripts/app/Hotel.js']
                          },
                     ])
@@ -75,4 +90,17 @@ angular.module('Wizcation', [
         })
     }
   ]
-);
+)
+
+.config(function ($translateProvider) {
+
+    // translate menu
+    $translateProvider.useStaticFilesLoader({
+        prefix: '\Scripts/Lang/',
+        suffix: '.json'
+    })
+    $translateProvider.preferredLanguage('th')
+    $translateProvider.forceAsyncReload(true);
+
+
+});

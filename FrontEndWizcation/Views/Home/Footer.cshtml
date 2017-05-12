@@ -2,19 +2,18 @@
 @{
     ViewBag.Title = "Footer";
 }<!-- FOOTER -->
-<div class="footerbg">
+<div class="footerbgblack">
     <div class="container">
-
         <div class="col-md-3">
             <span class="ftitle">Let's socialize</span>
             <div class="scont">
-                <a href="#" class="social1b"><img src="\Template/images/icon-facebook.png" alt="" /></a>
-                <a href="#" class="social2b"><img src="\Template/images/icon-twitter.png" alt="" /></a>
-                <a href="#" class="social3b"><img src="\Template/images/icon-gplus.png" alt="" /></a>
-                <a href="#" class="social4b"><img src="\Template/images/icon-youtube.png" alt="" /></a>
+                <a href="https://www.facebook.com/Wizcation-local-684103094945065/" class="social1b"><img src="\Template/images/icon-facebook.png" alt="" /></a>
+                <a href="#/" class="social2b"><img src="\Template/images/icon-twitter.png" alt="" /></a>
+                <a href="#/" class="social3b"><img src="\Template/images/icon-gplus.png" alt="" /></a>
+                <a href="https://www.youtube.com/watch?v=ZSDG1hmYbPA" class="social4b"><img src="\Template/images/icon-youtube.png" alt="" /></a>
                 <br /><br /><br />
                 <img src="\Template/images/logosmal.png" alt="" /><br />
-                &copy; 2013  |  <a href="#">Privacy Policy</a><br />
+                &copy; @DateTime.Now.Year  |  <a href="#">Privacy Policy</a><br />
                 All Rights Reserved
                 <br /><br />
 
@@ -26,12 +25,12 @@
             <span class="ftitle">About Us</span>
             <br /><br />
             <ul class="footerlist">
-                <li><a ui-sref="CompanyOverview">Company Overview</a></li>
-                <li><a href="#">Private privacy</a></li>
-                <li><a href="#">Term@Condition</a></li>
-                <li><a href="#">Enquiry</a></li>
-                <li><a href="#">Career</a></li>
-                <li><a href="#">Contact us</a></li>
+                <li><a ui-sref="CompanyOverview" translate="footer.company_overview"></a></li>
+                <li><a ui-sref="CompanyOverview" translate="footer.private_privacy"></a></li>
+                <li><a ui-sref="CompanyOverview" translate="footer.term_condition"></a></li>
+                <li><a ui-sref="CompanyOverview" translate="footer.enquiry"></a></li>
+                <li><a ui-sref="CompanyOverview" translate="footer.career"></a></li>
+                <li><a ui-sref="CompanyOverview" translate="footer.contact_us"></a></li>
             </ul>
         </div>
         <!-- End of column 2-->
@@ -40,12 +39,12 @@
             <span class="ftitle">ParnerShip</span>
             <br /><br />
             <ul class="footerlist">
-                <li><a href="#">Log in My account</a></li>
-                <li><a href="#">Service & Support</a></li>
-                <li><a href="#">FAQs ช่วยเหลือ</a></li>
-                <li><a href="#">How wizcation works</a></li>
-                <li><a href="#">นโยบายการชำระเงิน</a></li>
-                <li><a href="#">Site Map</a></li>
+                <li><a ui-sref="CompanyOverview" translate="footer.login_myaccount"></a></li>
+                <li><a ui-sref="CompanyOverview" translate="footer.service_support"></a></li>
+                <li><a ui-sref="CompanyOverview" translate="footer.faqs_help"></a></li>
+                <li><a ui-sref="CompanyOverview" translate="footer.how_wizcation_work"></a></li>
+                <li><a ui-sref="CompanyOverview" translate="footer.payment_policy"></a></li>
+                <li><a ui-sref="CompanyOverview" translate="footer.sitemap"></a></li>
             </ul>
         </div>
         <!-- End of column 3-->
@@ -61,11 +60,8 @@
             <span class="pnr">1-866-599-6674</span><br />
             office@travel.com
         </div>
-        <!-- End of column 4-->
-        Copyright &copy; 2013 <a href="#">Travel Agency</a> All rights reserved. <a href="http://titanicthemes.com">TitanicThemes.com</a>
-        <br /><br />
-
-        <a href="#top" class="gotop scroll"><img src="\Template/images/spacer.png" alt="" /></a>
+       
+        <a href="#" id="btn-scroll-up" class="gotop scroll"><img src="\Template/images/spacer.png" alt="" /></a>
 
     </div>
 </div>
