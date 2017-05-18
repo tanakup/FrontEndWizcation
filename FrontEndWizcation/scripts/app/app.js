@@ -3,6 +3,8 @@ angular.module('Wizcation', [
   'ui.router',
   'oc.lazyLoad',
   'pascalprecht.translate',
+  'ngAutocomplete',
+  '720kb.datepicker'
 ])
 
 .run(
@@ -21,6 +23,7 @@ angular.module('Wizcation', [
      .config(['$locationProvider', function($locationProvider) {
          $locationProvider.hashPrefix('');
      }])
+    
 .config(
   ['$stateProvider', '$urlRouterProvider', '$ocLazyLoadProvider',
     function ($stateProvider, $urlRouterProvider, $ocLazyLoadProvider) {
@@ -37,9 +40,7 @@ angular.module('Wizcation', [
                            {
                                name: 'Home',
                                files: [
-                                   'scripts/app/Hotel.js',
-                                   'scripts/Lang/en.json',
-                                   'scripts/Lang/th.json',
+                                   'scripts/app/Hotel.js'
                                ]
                            },
                       ])
@@ -49,6 +50,7 @@ angular.module('Wizcation', [
               .state('Hotel', {
                    url: "/hotel",
                    templateUrl: '\Hotel/Index',
+                   controller: 'Hotel',
                    resolve: {
                        lazyLoad: ['$ocLazyLoad', function ($ocLazyLoad) {
                            return $ocLazyLoad.load([
@@ -59,7 +61,22 @@ angular.module('Wizcation', [
                            ])
                        }]
                    }
-               })
+              })
+             .state('HotelDetail', {
+                 url: "/hotel/hotel_detail/{ID:int}",
+                 templateUrl: '\Hotel/Detail',
+                 controller: 'HotelDetail',
+                 resolve: {
+                     lazyLoad: ['$ocLazyLoad', function ($ocLazyLoad) {
+                         return $ocLazyLoad.load([
+                              {
+                                  name: 'Hotel',
+                                  files: ['scripts/app/Hotel.js']
+                              },
+                         ])
+                     }]
+                 }
+             })
               .state('Activities', {
                   url: "/activities",
                   templateUrl: '\Activities/Index',
@@ -99,8 +116,9 @@ angular.module('Wizcation', [
         prefix: '\Scripts/Lang/',
         suffix: '.json'
     })
-    $translateProvider.preferredLanguage('th')
+    $translateProvider.preferredLanguage('en')
     $translateProvider.forceAsyncReload(true);
 
 
 });
+

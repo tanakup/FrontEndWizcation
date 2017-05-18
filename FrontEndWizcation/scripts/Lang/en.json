@@ -1,25 +1,21 @@
 {
-  "footer": {
-    "company_overview": "Company Overview",
-    "private_privacy": "Private privacy",
-    "term_condition": "Term@Condition",
-    "enquiry": "Enquiry",
-    "career": "Career",
-    "contact_us": "Contact us",
-    "login_myaccount": "Log in My Account",
-    "service_support": "Service & Support",
-    "faqs_help": "FAQs",
-    "how_wizcation_work": "How wizcation works",
-    "payment_policy": "Payment Policy",
-    "sitemap": "Site Map"
-  },
-  "header": {
-    "home": "Home",
-    "hotel": "Hotel",
-    "activities": "Activites",
-    "language": "Language",
-    "sign_in": "Sign In",
-    "create_account": "Create Account"
-  }
-
+  "company_overview": "Company Overview",
+  "private_privacy": "Private Policy",
+  "term_condition": "Term@Condition",
+  "enquiry": "Enquiry",
+  "career": "Career",
+  "contact_us": "Contact us",
+  "login_myaccount": "Log in My Account",
+  "service_support": "Service & Support",
+  "faqs_help": "FAQs",
+  "how_wizcation_work": "How wizcation works",
+  "payment_policy": "Payment Policy",
+  "sitemap": "Site Map",
+  "home": "Home",
+  "hotel": "Hotel",
+  "activities": "Activites",
+  "language": "Language",
+  "sign_in": "Sign In",
+  "create_account": "Create Account",
+  "customer_support": "Customer Support"
 }

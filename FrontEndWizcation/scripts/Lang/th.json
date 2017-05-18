@@ -1,24 +1,22 @@
 ﻿{
-  "footer": {
-    "company_overview": "เกี่ยวกับบริษัท",
-    "private_privacy": "Private privacy",
-    "term_condition": "ข้อกำหนดและเงื่อนไข",
-    "enquiry": "ติดต่อสอบถาม",
-    "career": "สมัครงาน",
-    "contact_us": "ติดต่อเรา",
-    "login_myaccount": "เข้าบัญชี",
-    "service_support": "การบริการและการสนับสนุน",
-    "faqs_help": "FAQs ช่วยเหลือ",
-    "how_wizcation_work": "ร่วมงานกับ wizcation",
-    "payment_policy": "นโยบายการชำระเงิน",
-    "sitemap": "แผนผังเว็บไซต์"
-  },
-"header": {
-    "home": "หน้าหลัก",
-    "hotel": "โรงแรม",
-    "activities": "กิจกรรม",
+  "company_overview": "เกี่ยวกับบริษัท",
+  "private_privacy": "นโยบายความเป็นส่วนตัว",
+  "term_condition": "ข้อกำหนดและเงื่อนไข",
+  "enquiry": "ติดต่อสอบถาม",
+  "career": "สมัครงาน",
+  "contact_us": "ติดต่อเรา",
+  "login_myaccount": "เข้าบัญชี",
+  "service_support": "การบริการและการสนับสนุน",
+  "faqs_help": "FAQs ช่วยเหลือ",
+  "how_wizcation_work": "ร่วมงานกับ wizcation",
+  "payment_policy": "นโยบายการชำระเงิน",
+  "sitemap": "แผนผังเว็บไซต์",
+  "home": "หน้าหลัก",
+  "hotel": "โรงแรม",
+  "activities": "กิจกรรม",
   "languaue": "ภาษา",
   "sign_in": "เข้าสู่ระบบ",
   "create_account": "สร้างบัญชี",
-  } 
+  "customer_support": "การสนับสนุนลูกค้า"
+
 }

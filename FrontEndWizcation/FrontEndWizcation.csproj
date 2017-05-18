@@ -144,6 +144,8 @@
     <Content Include="Images\Wallpaper\hotel3.jpg" />
     <Content Include="scripts\ai.0.15.0-build58334.js" />
     <Content Include="scripts\ai.0.15.0-build58334.min.js" />
+    <Content Include="scripts\angular_libary\angular-datepicker\css\angular-datepicker.css" />
+    <Content Include="scripts\angular_libary\angular-datepicker\js\angular-datepicker.js" />
     <Content Include="scripts\angular_libary\angular-sanitize.min.js" />
     <Content Include="scripts\angular_libary\angular-translate-loader-static-files.min.js" />
     <Content Include="scripts\angular_libary\angular-translate-storage-local.min.js" />
@@ -879,6 +881,7 @@
     <Content Include="scripts\angular_libary\i18n\angular-locale_zh.js" />
     <Content Include="scripts\angular_libary\i18n\angular-locale_zu-za.js" />
     <Content Include="scripts\angular_libary\i18n\angular-locale_zu.js" />
+    <Content Include="scripts\angular_libary\angular-google-maps.min.js" />
     <Content Include="scripts\app\app.js" />
     <Content Include="scripts\app\Hotel.js" />
     <Content Include="scripts\app\Page.js" />
@@ -978,6 +981,52 @@
     <Content Include="Template\dist\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Template\dist\js\bootstrap.js" />
     <Content Include="Template\dist\js\bootstrap.min.js" />
+    <Content Include="Template\examples\carousel\carousel.css" />
+    <Content Include="Template\examples\carousel\index.html" />
+    <Content Include="Template\examples\grid\grid.css" />
+    <Content Include="Template\examples\grid\index.html" />
+    <Content Include="Template\examples\jumbotron-narrow\index.html" />
+    <Content Include="Template\examples\jumbotron-narrow\jumbotron-narrow.css" />
+    <Content Include="Template\examples\jumbotron\index.html" />
+    <Content Include="Template\examples\jumbotron\jumbotron.css" />
+    <Content Include="Template\examples\justified-nav\index.html" />
+    <Content Include="Template\examples\justified-nav\justified-nav.css" />
+    <Content Include="Template\examples\navbar-fixed-top\index.html" />
+    <Content Include="Template\examples\navbar-fixed-top\navbar-fixed-top.css" />
+    <Content Include="Template\examples\navbar-static-top\index.html" />
+    <Content Include="Template\examples\navbar-static-top\navbar-static-top.css" />
+    <Content Include="Template\examples\navbar\index.html" />
+    <Content Include="Template\examples\navbar\navbar.css" />
+    <Content Include="Template\examples\non-responsive\index.html" />
+    <Content Include="Template\examples\non-responsive\non-responsive.css" />
+    <Content Include="Template\examples\offcanvas\index.html" />
+    <Content Include="Template\examples\offcanvas\offcanvas.css" />
+    <Content Include="Template\examples\offcanvas\offcanvas.js" />
+    <Content Include="Template\examples\screenshots\carousel.jpg" />
+    <Content Include="Template\examples\screenshots\grid.jpg" />
+    <Content Include="Template\examples\screenshots\jumbotron-narrow.jpg" />
+    <Content Include="Template\examples\screenshots\jumbotron.jpg" />
+    <Content Include="Template\examples\screenshots\justified-nav.jpg" />
+    <Content Include="Template\examples\screenshots\navbar-fixed.jpg" />
+    <Content Include="Template\examples\screenshots\navbar-static.jpg" />
+    <Content Include="Template\examples\screenshots\navbar.jpg" />
+    <Content Include="Template\examples\screenshots\non-responsive.jpg" />
+    <Content Include="Template\examples\screenshots\offcanvas.jpg" />
+    <Content Include="Template\examples\screenshots\sign-in.jpg" />
+    <Content Include="Template\examples\screenshots\starter-template.jpg" />
+    <Content Include="Template\examples\screenshots\sticky-footer-navbar.jpg" />
+    <Content Include="Template\examples\screenshots\sticky-footer.jpg" />
+    <Content Include="Template\examples\screenshots\theme.jpg" />
+    <Content Include="Template\examples\signin\index.html" />
+    <Content Include="Template\examples\signin\signin.css" />
+    <Content Include="Template\examples\starter-template\index.html" />
+    <Content Include="Template\examples\starter-template\starter-template.css" />
+    <Content Include="Template\examples\sticky-footer-navbar\index.html" />
+    <Content Include="Template\examples\sticky-footer-navbar\sticky-footer-navbar.css" />
+    <Content Include="Template\examples\sticky-footer\index.html" />
+    <Content Include="Template\examples\sticky-footer\sticky-footer.css" />
+    <Content Include="Template\examples\theme\index.html" />
+    <Content Include="Template\examples\theme\theme.css" />
     <Content Include="Template\fonts\fontawesome-webfont.svg" />
     <Content Include="Template\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Template\images\about-arrow.png" />
@@ -1357,6 +1406,8 @@
     <Content Include="Template\js\transition.js" />
     <Content Include="Template\plugins\animo\animate+animo.css" />
     <Content Include="Template\plugins\animo\animo.js" />
+    <Content Include="Template\plugins\autocomplete\googleapi.js" />
+    <Content Include="Template\plugins\autocomplete\ngAutocomplete.js" />
     <Content Include="Template\plugins\jslider\css\jslider.blue.css" />
     <Content Include="Template\plugins\jslider\css\jslider.css" />
     <Content Include="Template\plugins\jslider\css\jslider.plastic.css" />
@@ -1510,6 +1561,7 @@
     <Content Include="Views\Home\TopDeals.cshtml" />
     <Content Include="Views\Activities\Index.cshtml" />
     <Content Include="scripts\Lang\en.json" />
+    <Content Include="Views\Hotel\Detail.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -1521,7 +1573,6 @@
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
     <Folder Include="scripts\angular_libary\i18n\ngLocale\" />
-    <Folder Include="Template\examples\" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
