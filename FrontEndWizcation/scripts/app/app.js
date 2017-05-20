@@ -10,7 +10,14 @@ angular.module('Wizcation', [
 .run(
   ['$rootScope', '$state', '$stateParams',
     function ($rootScope, $state, $stateParams) {
+     
 
+        if (localStorage.getItem('lang') == "null") {
+          
+            localStorage.setItem('lang', "th");
+        } else {
+           
+        }
         // It's very handy to add references to $state and $stateParams to the $rootScope
         // so that you can access them from any scope within your applications.For example,
         // <li ng-class="{ active: $state.includes('contacts.list') }"> will set the <li>
@@ -94,17 +101,28 @@ angular.module('Wizcation', [
         .state('CompanyOverview', {
             url: "/CompanyOverview",
             templateUrl: '\Home/About',
-            resolve: {
-                lazyLoad: ['$ocLazyLoad', function ($ocLazyLoad) {
-                    return $ocLazyLoad.load([
-                         {
-                             name: 'CompanyOverview',
-                             files: ['scripts/app/Hotel.js']
-                         },
-                    ])
-                }]
-            }
+     
         })
+           .state('TermCondition', {
+               url: "/TermCondition",
+               templateUrl: '\Home/TermCondition',
+               resolve: {
+                   lazyLoad: ['$ocLazyLoad', function ($ocLazyLoad) {
+                       return $ocLazyLoad.load([
+                            {
+                                name: 'PrivatePolicy',
+                                files: ['scripts/app/Hotel.js']
+                            },
+                       ])
+                   }]
+               }
+           })
+        .state('Policy', {
+            url: "/PrivatePolicy",
+            templateUrl: '\Home/PrivatePolicy',
+           
+        })
+        
     }
   ]
 )
@@ -116,9 +134,21 @@ angular.module('Wizcation', [
         prefix: '\Scripts/Lang/',
         suffix: '.json'
     })
-    $translateProvider.preferredLanguage('en')
+    $translateProvider.preferredLanguage(localStorage.getItem('lang'))
     $translateProvider.forceAsyncReload(true);
 
 
-});
+})
 
+.controller("translateController", ["$scope", "$translate", "$http", function ($scope, $translate, $http) {
+
+    $translate.use(localStorage.getItem('lang'));
+    $http.get("api/Setting/ListLanguageData").then(function (response) {
+        $scope.lang = response.data;
+    });
+    $scope.langSelect =localStorage.getItem('lang');
+    $scope.changeLanguage = function (lang) {
+        $translate.use(lang);
+        $scope.langSelect = lang;
+    }
+}]);

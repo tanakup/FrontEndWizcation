@@ -1378,9 +1378,9 @@
                             <button class="bookbtn mt1" ui-sref="HotelDetail({ID:{{n.HotelId}}})">Book</button>
                         </div>
                         <div class="labelleft">
-                            <b ng-bind="n.HotelName"></b><br /><br /><br />
+                            <b ng-bind="n.HotelName | limitTo:21"></b><br /><br /><br />
                             <p class="grey">
-                                {{n.Content}}
+                                {{n.Content| limitTo:100}}...
                             </p>
                         </div>
                     </div>

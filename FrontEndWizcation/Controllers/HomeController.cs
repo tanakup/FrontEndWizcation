@@ -37,5 +37,45 @@ namespace FrontEndWizcation.Controllers
         {
             return View();
         }
+        public ActionResult PrivatePolicy()
+        {
+            return View();
+        }
+        public ActionResult TermCondition()
+        {
+            return View();
+        }
+        public ActionResult Enquiry()
+        {
+            return View();
+        }
+        public ActionResult Career()
+        {
+            return View();
+        }
+        public ActionResult ServiceSupport()
+        {
+            return View();
+        }
+        public ActionResult FAQs()
+        {
+            return View();
+        }
+        public ActionResult PaymentPolicy()
+        {
+            return View();
+        }
+        public ActionResult PartnerJoin()
+        {
+            return View();
+        }
+        public ActionResult SiteMap()
+        {
+            return View();
+        }
+        public ActionResult LogInMyAccount()
+        {
+            return View();
+        }
     }
 }

@@ -15,8 +15,12 @@
   "hotel": "โรงแรม",
   "activities": "กิจกรรม",
   "languaue": "ภาษา",
+   "account": "บัญชีผู้ใช้",
   "sign_in": "เข้าสู่ระบบ",
   "create_account": "สร้างบัญชี",
-  "customer_support": "การสนับสนุนลูกค้า"
+  "customer_support": "การสนับสนุนลูกค้า",
+  "wizcation_profile": "เกี่ยวกับ Wizcation",
+  "th": "ไทย",
+  "en": "English"
 
 }

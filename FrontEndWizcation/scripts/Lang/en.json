@@ -15,7 +15,11 @@
   "hotel": "Hotel",
   "activities": "Activites",
   "language": "Language",
+  "account": "Acount",
   "sign_in": "Sign In",
   "create_account": "Create Account",
-  "customer_support": "Customer Support"
+  "customer_support": "Customer Support",
+  "wizcation_profile": "Wizcation Profile",
+  "th": "Thai",
+  "en": "English"
 }

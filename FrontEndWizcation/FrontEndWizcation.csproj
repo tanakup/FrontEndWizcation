@@ -142,6 +142,7 @@
     <Content Include="Images\Wallpaper\hotel1.jpg" />
     <Content Include="Images\Wallpaper\hotel2.jpg" />
     <Content Include="Images\Wallpaper\hotel3.jpg" />
+    <Content Include="Images\Wallpaper\Travel.jpg" />
     <Content Include="scripts\ai.0.15.0-build58334.js" />
     <Content Include="scripts\ai.0.15.0-build58334.min.js" />
     <Content Include="scripts\angular_libary\angular-datepicker\css\angular-datepicker.css" />
@@ -887,6 +888,7 @@
     <Content Include="scripts\app\Page.js" />
     <Content Include="scripts\bootstrap.js" />
     <Content Include="scripts\bootstrap.min.js" />
+    <None Include="Properties\PublishProfiles\Wiz.pubxml" />
     <None Include="scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="scripts\component\dist\modules\ocLazyLoad.core.js" />
     <Content Include="scripts\component\dist\modules\ocLazyLoad.directive.js" />
@@ -1532,12 +1534,14 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\ActivitiesController.cs" />
+    <Compile Include="Controllers\ConfigSetting\SettingController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\HotelController.cs" />
     <Compile Include="Controllers\Hotel\ModuleHotelController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Modules\ConfigSetting\SettingData.cs" />
     <Compile Include="Modules\ConnectDB\DBHelper.cs" />
     <Compile Include="Modules\Hotel\HotelData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -1562,6 +1566,16 @@
     <Content Include="Views\Activities\Index.cshtml" />
     <Content Include="scripts\Lang\en.json" />
     <Content Include="Views\Hotel\Detail.cshtml" />
+    <Content Include="Views\Home\PrivatePolicy.cshtml" />
+    <Content Include="Views\Home\TermCondition.cshtml" />
+    <Content Include="Views\Home\Enquiry.cshtml" />
+    <Content Include="Views\Home\Career.cshtml" />
+    <Content Include="Views\Home\ServiceSupport.cshtml" />
+    <Content Include="Views\Home\FAQs.cshtml" />
+    <Content Include="Views\Home\PaymentPolicy.cshtml" />
+    <Content Include="Views\Home\PartnerJoin.cshtml" />
+    <Content Include="Views\Home\SiteMap.cshtml" />
+    <Content Include="Views\Home\LogInMyAccount.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -11,6 +11,7 @@
     <ProjectView>ShowAllFiles</ProjectView>
     <WebStackScaffolding_AreaDialogWidth>600</WebStackScaffolding_AreaDialogWidth>
     <UseIISExpress>true</UseIISExpress>
+    <NameOfLastUsedPublishProfile>Wiz</NameOfLastUsedPublishProfile>
   </PropertyGroup>
   <ProjectExtensions>
     <VisualStudio>

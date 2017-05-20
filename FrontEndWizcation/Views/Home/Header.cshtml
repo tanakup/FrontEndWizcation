@@ -23,15 +23,15 @@
                         <li ng-class="{active: $state.includes('Home')}"><a ui-sref="Home" translate="home"></a></li>
                         <li ng-class="{active: $state.includes('Hotel')}"><a ui-sref="Hotel" translate="hotel"></a></li>
                         <li ng-class="{active: $state.includes('Activities')}"><a ui-sref="Activities" translate="activities"></a></li>
-                        <li class="dropdown">
-                            <a data-toggle="dropdown" class="dropdown-toggle" href="#"> EN <b class="lightcaret mt-2"></b></a>
+                        <li class="dropdown" ng-controller="translateController">
+                            <a data-toggle="dropdown" class="dropdown-toggle" translate="{{langSelect}}" href="#">  <b class="lightcaret mt-2"></b></a>
                             <ul class="dropdown-menu posright-0">
                                 <li>
                                     <div class="row">
-                                        <ul class="droplist col-md-4">
-                                            <li><a>TH</a></li>
-                                            <li><a>EN</a></li>
+                                        <ul class="droplist col-md-4" >
+                                            <li ng-repeat="a in lang" ng-click="changeLanguage(a.LanguagesCode)"><a translate="{{a.LanguagesCode}}"></a></li>
                                         </ul>
+
                                         @*<ul class="droplist col-md-4">
                                             <li class="dropdown-header">Update - <span class="green">14 New Pages</span></li>
                                             <li><a href="z-new-homepage.html">New Homepage</a>  <span class="glyphicon glyphicon-star lblue"></span></li>
@@ -47,7 +47,7 @@
                             </ul>
                         </li>
                         <li class="dropdown">
-                            <a data-toggle="dropdown" class="dropdown-toggle" href="#"> Account <b class="lightcaret mt-2"></b></a>
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="#"  translate="{{account}}" >  <b class="lightcaret mt-2"></b></a>
                             <ul class="dropdown-menu posright-0">
                                 <li>
                                     <a  translate="sign_in"></a>
