@@ -1,0 +1,55 @@
+﻿
+@{
+    ViewBag.Title = "TermCondition";
+}
+
+<div class="container breadcrub">
+    <div>
+        <a class="homebtn left" href="#"></a>
+        <div class="left">
+            <ul class="bcrumbs">
+                <li>/</li>
+                <li><a href="#" class="active">Term Condition</a></li>
+            </ul>
+        </div>
+        <a class="backbtn right" href="#"></a>
+    </div>
+    <div class="clearfix"></div>
+    <div class="brlines"></div>
+</div>
+
+<!-- CONTENT -->
+<div class="container">
+    <div class="container mt25 offset-0">
+        <!-- CONTENT -->
+        <div class="col-md-12 pagecontainer2 offset-0">
+            <div class="hpadding50c">
+                <p class="lato size30 slim" translate="subject_term_condition"></p>
+                <p class="aboutarrow"></p>
+            </div>
+            <div class="line3"></div>
+            <div class="hpadding50c">
+                <br />
+                <!-- IMG RIGHT TEXT -->
+                <div class="cpdd02">
+                    <div class="opensans size18 grey">
+                        <span class="lato dark bold" translate="sub_subject_term_condition"></span><br /><br />
+                        <p style="text-indent: 50px;" translate="terms_conditions"></p><br />
+                        <ul>
+                            @for (var i = 1; i <= 10; i++)
+                            {<li style="padding-bottom: 10px;" translate="term_con_list_@i"></li>}
+                        </ul>
+                        <br />
+                        <br />
+                    </div>
+                </div>
+                <!-- END OF IMG RIGHT TEXT -->
+            </div>
+        </div>
+        <!-- END CONTENT -->
+    </div>
+</div>
+<!-- END OF CONTENT -->
+
+
+@Html.Partial("../Home/Footer")

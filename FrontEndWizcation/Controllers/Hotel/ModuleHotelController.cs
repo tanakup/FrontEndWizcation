@@ -20,5 +20,12 @@ namespace FrontEndWizcation.Controllers.Hotel
         {
             return repository.ListHotel(id);
         }
+        //  api/ModuleHotel/ListHotelTop2/:id
+        [HttpGet]
+        [ActionName("ListHotelTop2")]
+        public DataSet GetListHotelTop2(int id)
+        {
+            return repository.ListHotelTop2(id);
+        }
     }
 }

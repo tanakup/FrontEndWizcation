@@ -142,9 +142,15 @@
     <Content Include="Images\Wallpaper\hotel1.jpg" />
     <Content Include="Images\Wallpaper\hotel2.jpg" />
     <Content Include="Images\Wallpaper\hotel3.jpg" />
+    <Content Include="Images\Wallpaper\Travel.jpg" />
     <Content Include="scripts\ai.0.15.0-build58334.js" />
     <Content Include="scripts\ai.0.15.0-build58334.min.js" />
+    <Content Include="scripts\angular_libary\angular-datepicker\css\angular-datepicker.css" />
+    <Content Include="scripts\angular_libary\angular-datepicker\js\angular-datepicker.js" />
     <Content Include="scripts\angular_libary\angular-sanitize.min.js" />
+    <Content Include="scripts\angular_libary\angular-translate-loader-static-files.min.js" />
+    <Content Include="scripts\angular_libary\angular-translate-storage-local.min.js" />
+    <Content Include="scripts\angular_libary\angular-translate.min.js" />
     <Content Include="scripts\angular_libary\angular-ui-router.min.js" />
     <Content Include="scripts\angular_libary\angular.min.js" />
     <Content Include="scripts\angular_libary\i18n\angular-locale_af-na.js" />
@@ -876,14 +882,30 @@
     <Content Include="scripts\angular_libary\i18n\angular-locale_zh.js" />
     <Content Include="scripts\angular_libary\i18n\angular-locale_zu-za.js" />
     <Content Include="scripts\angular_libary\i18n\angular-locale_zu.js" />
+    <Content Include="scripts\angular_libary\angular-google-maps.min.js" />
     <Content Include="scripts\app\app.js" />
     <Content Include="scripts\app\Hotel.js" />
     <Content Include="scripts\app\Page.js" />
     <Content Include="scripts\bootstrap.js" />
     <Content Include="scripts\bootstrap.min.js" />
+    <None Include="Properties\PublishProfiles\Wiz.pubxml" />
     <None Include="scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="scripts\component\dist\modules\ocLazyLoad.core.js" />
+    <Content Include="scripts\component\dist\modules\ocLazyLoad.directive.js" />
+    <Content Include="scripts\component\dist\modules\ocLazyLoad.loaders.common.js" />
+    <Content Include="scripts\component\dist\modules\ocLazyLoad.loaders.core.js" />
+    <Content Include="scripts\component\dist\modules\ocLazyLoad.loaders.cssLoader.js" />
+    <Content Include="scripts\component\dist\modules\ocLazyLoad.loaders.jsLoader.js" />
+    <Content Include="scripts\component\dist\modules\ocLazyLoad.loaders.requireJSLoader.js" />
+    <Content Include="scripts\component\dist\modules\ocLazyLoad.loaders.templatesLoader.js" />
+    <Content Include="scripts\component\dist\modules\ocLazyLoad.polyfill.ie8.js" />
+    <Content Include="scripts\component\dist\ocLazyLoad.js" />
+    <Content Include="scripts\component\dist\ocLazyLoad.min.js" />
+    <Content Include="scripts\component\dist\ocLazyLoad.require.js" />
+    <Content Include="scripts\component\dist\ocLazyLoad.require.min.js" />
     <Content Include="scripts\jquery-1.10.2.js" />
     <Content Include="scripts\jquery-1.10.2.min.js" />
+    <Content Include="scripts\Lang\th.json" />
     <Content Include="scripts\modernizr-2.6.2.js" />
     <Content Include="Template\assets\css\custom.css" />
     <Content Include="Template\assets\css\dashboard.css" />
@@ -1386,6 +1408,8 @@
     <Content Include="Template\js\transition.js" />
     <Content Include="Template\plugins\animo\animate+animo.css" />
     <Content Include="Template\plugins\animo\animo.js" />
+    <Content Include="Template\plugins\autocomplete\googleapi.js" />
+    <Content Include="Template\plugins\autocomplete\ngAutocomplete.js" />
     <Content Include="Template\plugins\jslider\css\jslider.blue.css" />
     <Content Include="Template\plugins\jslider\css\jslider.css" />
     <Content Include="Template\plugins\jslider\css\jslider.plastic.css" />
@@ -1509,12 +1533,15 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\ActivitiesController.cs" />
+    <Compile Include="Controllers\ConfigSetting\SettingController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\HotelController.cs" />
     <Compile Include="Controllers\Hotel\ModuleHotelController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Modules\ConfigSetting\SettingData.cs" />
     <Compile Include="Modules\ConnectDB\DBHelper.cs" />
     <Compile Include="Modules\Hotel\HotelData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -1536,6 +1563,19 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Content.cshtml" />
     <Content Include="Views\Home\TopDeals.cshtml" />
+    <Content Include="Views\Activities\Index.cshtml" />
+    <Content Include="scripts\Lang\en.json" />
+    <Content Include="Views\Hotel\Detail.cshtml" />
+    <Content Include="Views\Home\PrivatePolicy.cshtml" />
+    <Content Include="Views\Home\TermCondition.cshtml" />
+    <Content Include="Views\Home\Enquiry.cshtml" />
+    <Content Include="Views\Home\Career.cshtml" />
+    <Content Include="Views\Home\ServiceSupport.cshtml" />
+    <Content Include="Views\Home\FAQs.cshtml" />
+    <Content Include="Views\Home\PaymentPolicy.cshtml" />
+    <Content Include="Views\Home\PartnerJoin.cshtml" />
+    <Content Include="Views\Home\SiteMap.cshtml" />
+    <Content Include="Views\Home\LogInMyAccount.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
