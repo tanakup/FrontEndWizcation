@@ -63,7 +63,7 @@ angular.module('Wizcation', [
                            return $ocLazyLoad.load([
                                 {
                                     name: 'Hotel',
-                                    files: ['scripts/app/Hotel.js']
+                                    files: ['scripts/app/HotelDetails.js']
                                 },
                            ])
                        }]
