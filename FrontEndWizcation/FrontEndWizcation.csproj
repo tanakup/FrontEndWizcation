@@ -885,6 +885,7 @@
     <Content Include="scripts\angular_libary\angular-google-maps.min.js" />
     <Content Include="scripts\app\app.js" />
     <Content Include="scripts\app\Hotel.js" />
+    <Content Include="scripts\app\HotelDetails.js" />
     <Content Include="scripts\app\Page.js" />
     <Content Include="scripts\bootstrap.js" />
     <Content Include="scripts\bootstrap.min.js" />
@@ -975,6 +976,7 @@
     <Content Include="Template\css\fullwidth.css" />
     <Content Include="Template\css\responsive.css" />
     <Content Include="Template\css\simple.css" />
+    <Content Include="Template\css_modified\page-header.css" />
     <Content Include="Template\dashboard\index.html" />
     <Content Include="Template\dist\css\bootstrap-theme.css" />
     <Content Include="Template\dist\css\bootstrap-theme.min.css" />
