@@ -103,6 +103,5 @@ C:\Users\VerticalTec\Documents\wiz\WizFrontEnd\FrontEndWizcation\FrontEndWizcati
 C:\Users\VerticalTec\Documents\wiz\WizFrontEnd\FrontEndWizcation\FrontEndWizcation\bin\System.Net.Http.Formatting.xml
 C:\Users\VerticalTec\Documents\wiz\WizFrontEnd\FrontEndWizcation\FrontEndWizcation\bin\System.Web.Http.xml
 C:\Users\VerticalTec\Documents\wiz\WizFrontEnd\FrontEndWizcation\FrontEndWizcation\bin\System.Web.Http.WebHost.xml
-C:\Users\VerticalTec\Documents\wiz\WizFrontEnd\FrontEndWizcation\FrontEndWizcation\obj\Debug\FrontEndWizcation.csprojResolveAssemblyReference.cache
 C:\Users\VerticalTec\Documents\wiz\WizFrontEnd\FrontEndWizcation\FrontEndWizcation\obj\Debug\FrontEndWizcation.dll
 C:\Users\VerticalTec\Documents\wiz\WizFrontEnd\FrontEndWizcation\FrontEndWizcation\obj\Debug\FrontEndWizcation.pdb

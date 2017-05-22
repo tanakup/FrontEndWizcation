@@ -260,3 +260,4 @@ paket-files/
 *.suo
 FrontEndWizcation.dll
 KKWeb.csproj
+Obj/
