@@ -139,6 +139,7 @@
     <Content Include="Global.asax" />
     <Content Include="Images\Hotels\BC25DCD2-0761-408C-8EF1-CAD88D937C47\hotel_room-t1.jpg" />
     <Content Include="Images\Hotels\BC25DCD2-0761-408C-8EF1-CAD88D937C47\hotel_room-t2.jpg" />
+    <Content Include="Images\Hotels\noImage.jpg" />
     <Content Include="Images\Wallpaper\hotel1.jpg" />
     <Content Include="Images\Wallpaper\hotel2.jpg" />
     <Content Include="Images\Wallpaper\hotel3.jpg" />
@@ -908,6 +909,7 @@
     <Content Include="scripts\jquery-1.10.2.min.js" />
     <Content Include="scripts\Lang\th.json" />
     <Content Include="scripts\modernizr-2.6.2.js" />
+    <Content Include="scripts\ui-bootstrap-tpls-2.5.0.min.js" />
     <Content Include="Template\assets\css\custom.css" />
     <Content Include="Template\assets\css\dashboard.css" />
     <Content Include="Template\assets\css\docs.css" />

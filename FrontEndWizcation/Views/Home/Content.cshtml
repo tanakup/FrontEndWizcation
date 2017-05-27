@@ -159,33 +159,33 @@
                 <div class="bs-example bs-example-tabs cstyle04">
 
                     <ul class="nav nav-tabs" id="myTab">
-                        <li onclick="mySelectUpdate()" class="active"><a data-toggle="tab" href="#hotels"><span class="hotel"></span>Hotel</a></li>
-                        <li onclick="mySelectUpdate()" class=""><a data-toggle="tab" href="#vacations"><span class="suitcase"></span>Activities</a></li>
+                        <li onclick="mySelectUpdate()" class="active"><a data-toggle="tab" href="#hotels"><span class="hotel"></span>{{'hotel'|translate}}</a></li>
+                        <li onclick="mySelectUpdate()" class=""><a data-toggle="tab" href="#vacations"><span class="suitcase"></span>{{'activities'|translate}}</a></li>
                     </ul>
 
                     <div class="tab-content" id="myTabContent">
 
                         <div id="hotels" class="tab-pane fade active in">
-                            <span class="opensans size18">Where do you want to go?</span>
-                            <input type="text" class="form-control" ng-autocomplete ng-model="place" placeholder="search">
+                            <span class="opensans size18" translate="Wheredoyouwanttogo"></span>
+                            <input type="text" class="form-control" ng-autocomplete ng-model="place" placeholder="{{'search' | translate }}">
                             <br />
 
                             <div class="w50percent">
                                 <div class="wh90percent textleft">
-                                    <span class="opensans size13"><b>Check in date</b></span>
+                                    <span class="opensans size13"><b translate="checkin"></b></span>
                                     <datepicker date-format="yyyy-MM-dd" selector="form-control">
                                         <div class="input-group">
-                                            <input type="text" datepicker class="form-control mySelectCalendar" id="datepicker4" placeholder="yyyy-MM-dd" />
+                                            <input type="text" datepicker class="form-control mySelectCalendar" id="datepicker4" placeholder="{{'format_date'|translate}}" />
                                         </div>
                                     </datepicker>
                                 </div>
                             </div>
                             <div class="w50percentlast">
                                 <div class="wh90percent textleft right">
-                                    <span class="opensans size13"><b>Check Out date</b></span>
+                                    <span class="opensans size13"><b translate="checkout"></b></span>
                                     <datepicker date-format="yyyy-MM-dd" selector="form-control">
                                         <div class="input-group">
-                                            <input type="text" datepicker class="form-control mySelectCalendar" id="datepicker4" placeholder="yyyy-MM-dd" />
+                                            <input type="text" datepicker class="form-control mySelectCalendar" id="datepicker4" placeholder="{{'format_date'|translate}}" />
                                         </div>
                                     </datepicker>                                </div>
                             </div>
@@ -195,7 +195,7 @@
                             <div class="room1 margtop15">
                                 <div class="w50percent">
                                     <div class="wh90percent textleft">
-                                        <span class="opensans size13"><b>ROOM</b></span><br />
+                                        <span class="opensans size13"><b translate="room"></b></span><br />
                                         <select class="form-control mySelectBoxClass">
                                             <option>1</option>
                                             <option selected>2</option>
@@ -209,22 +209,27 @@
                                     <div class="wh90percent textleft right">
                                         <div class="w50percent">
                                             <div class="wh90percent textleft left">
-                                                <span class="opensans size13"><b>Adult</b></span>
+                                                <span class="opensans size13"><b translate="adult"></b></span>
                                                 <select class="form-control mySelectBoxClass">
                                                     <option>1</option>
                                                     <option selected>2</option>
                                                     <option>3</option>
                                                     <option>4</option>
                                                     <option>5</option>
+                                                    <option>6</option>
+                                                    <option>7</option>
+                                                    <option>8</option>
+                                                    <option>9</option>
+                                                    <option>10</option>
                                                 </select>
                                             </div>
                                         </div>
                                         <div class="w50percentlast">
                                             <div class="wh90percent textleft right">
-                                                <span class="opensans size13"><b>Child</b></span>
+                                                <span class="opensans size13"><b translate="child"></b></span>
                                                 <select class="form-control mySelectBoxClass">
-                                                    <option>0</option>
-                                                    <option selected>1</option>
+                                                    <option selected>0</option>
+                                                    <option>1</option>
                                                     <option>2</option>
                                                     <option>3</option>
                                                     <option>4</option>
@@ -282,7 +287,7 @@
                                     <div class="wh90percent textleft right">
                                         <div class="w50percent">
                                             <div class="wh90percent textleft left">
-                                                <span class="opensans size13"><b>Adult</b></span>
+                                                <span class="opensans size13"><b translate="adult"></b></span>
                                                 <select class="form-control mySelectBoxClass">
                                                     <option>1</option>
                                                     <option selected>2</option>
@@ -294,7 +299,7 @@
                                         </div>
                                         <div class="w50percentlast">
                                             <div class="wh90percent textleft right">
-                                                <span class="opensans size13"><b>Child</b></span>
+                                                <span class="opensans size13"><b translate="child"></b></span>
                                                 <select class="form-control mySelectBoxClass">
                                                     <option>0</option>
                                                     <option selected>1</option>
@@ -309,82 +314,8 @@
                                 </div>
                             </div>
 
-                            <div class="room2 none">
-                                <div class="clearfix"></div><div class="line1"></div>
-                                <div class="w50percent">
-                                    <div class="wh90percent textleft">
-                                        <span class="opensans size13"><b>ROOM 2</b></span><br />
-                                        <div class="addroom2 block grey"><a href="#" onclick="addroom3()" class="grey">+ Add room</a> | <a href="#" onclick="removeroom2()" class="orange"><img src="\Template/images/delete.png" alt="delete" /></a></div>
-                                    </div>
-                                </div>
-                                <div class="w50percentlast">
-                                    <div class="wh90percent textleft right">
-                                        <div class="w50percent">
-                                            <div class="wh90percent textleft left">
-                                                <span class="opensans size13"><b>Adult</b></span>
-                                                <select class="form-control mySelectBoxClass">
-                                                    <option>1</option>
-                                                    <option>2</option>
-                                                    <option selected>3</option>
-                                                    <option>4</option>
-                                                    <option>5</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="w50percentlast">
-                                            <div class="wh90percent textleft right">
-                                                <span class="opensans size13"><b>Child</b></span>
-                                                <select class="form-control mySelectBoxClass">
-                                                    <option selected>0</option>
-                                                    <option>1</option>
-                                                    <option>2</option>
-                                                    <option>3</option>
-                                                    <option>4</option>
-                                                    <option>5</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="room3 none">
-                                <div class="clearfix"></div><div class="line1"></div>
-                                <div class="w50percent">
-                                    <div class="wh90percent textleft">
-                                        <span class="opensans size13"><b>ROOM 3</b></span><br />
-                                        <div class="addroom3 block grey"><a href="#" onclick="addroom3()" class="grey">+ Add room</a> | <a href="#" onclick="removeroom3()" class="orange"><img src="\Template/images/delete.png" alt="delete" /></a></div>
-                                    </div>
-                                </div>
-                                <div class="w50percentlast">
-                                    <div class="wh90percent textleft right">
-                                        <div class="w50percent">
-                                            <div class="wh90percent textleft left">
-                                                <span class="opensans size13"><b>Adult</b></span>
-                                                <select class="form-control mySelectBoxClass">
-                                                    <option selected>1</option>
-                                                    <option>2</option>
-                                                    <option>3</option>
-                                                    <option>4</option>
-                                                    <option>5</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="w50percentlast">
-                                            <div class="wh90percent textleft right">
-                                                <span class="opensans size13"><b>Child</b></span>
-                                                <select class="form-control mySelectBoxClass">
-                                                    <option selected>0</option>
-                                                    <option>1</option>
-                                                    <option>2</option>
-                                                    <option>3</option>
-                                                    <option>4</option>
-                                                    <option>5</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            
+                            
 
                         </div>
                         <!--End of 4th tab -->
@@ -392,12 +323,12 @@
 
                     <div class="searchbg">
                         <form>
-                            <button type="submit" class="btn-search" ui-sref="Hotel" >Search</button>
+                            <button type="submit" class="btn-search" ui-sref="Hotel">{{'search'|translate}}</button>
                         </form>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4" ng-repeat="n in ListHotel">
+            <div class="col-md-4" ng-repeat="n in ListDeals">
                 <div class="shadow cstyle05">
                     <div class="fwi one">
                         <img src="{{n.Images}}" /><div class="mhover none">

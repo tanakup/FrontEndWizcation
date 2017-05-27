@@ -12,6 +12,7 @@ namespace FrontEndWizcation.Modules.Hotel
     {
         DataSet ListHotel(int hotelId);
         DataSet ListHotelTop2(int hotelId);
+        DataSet ListAcomodation();
     }
     public class HotelData: IHotelData
     {
@@ -25,7 +26,7 @@ namespace FrontEndWizcation.Modules.Hotel
             SqlConnection ObjConn = DBHelper.ConnectDb(ref errMsg);
             string strSQL = "";
                 strSQL = " \r\n select a.HotelId,a.HotelName,b.Price,c.Content,a.Rate, "+
-                         " \r\n  Case When e.Images IS NULL then 'Images/Hotels/BC25DCD2-0761-408C-8EF1-CAD88D937C47/hotel_room-t1.jpg' else e.Images end as  Images " +
+                         " \r\n  Case When e.Images IS NULL then 'Images/Hotels/noImage.jpg' else e.Images end as  Images " +
                          " \r\n From Hotel a  join( " +
                          " \r\n select HotelId, Min(Price) as Price From CatergoryRooms " +
                          " \r\n group by HotelId " +
@@ -55,15 +56,29 @@ namespace FrontEndWizcation.Modules.Hotel
             return ds;
         }
 
-        public DataTable ListAcomodation()
+        public DataSet ListAcomodation()
         {
-            
+
+            DataSet ds = new DataSet();
             SqlConnection ObjConn = DBHelper.ConnectDb(ref errMsg);
             string strSQL = "select * From acomodationtype where IsDelete = 0";
-           
             DataTable dt = DBHelper.List(strSQL, ObjConn);
+            dt.TableName = "acomodationtype";
+            ds.Tables.Add(dt);
+          
+            strSQL = "  select * From Amentities where IsDelete = 0;";
+            DataTable dt1 = DBHelper.List(strSQL, ObjConn);
+            dt1.TableName = "amentities";
+            ds.Tables.Add(dt1);
+
+            strSQL = "   select * From Facilities where IsDelete = 0;";
+            DataTable dt2 = DBHelper.List(strSQL, ObjConn);
+            dt2.TableName = "facilities";
+            ds.Tables.Add(dt2);
+
+
             ObjConn.Close();
-            return dt;
+            return ds;
         }
 
 
@@ -73,8 +88,8 @@ namespace FrontEndWizcation.Modules.Hotel
             DataSet ds = new DataSet();
             SqlConnection ObjConn = DBHelper.ConnectDb(ref errMsg);
             string strSQL = "";
-            strSQL = " \r\n select Top 2  a.HotelId,a.HotelName,b.Price,c.Content,a.Rate, " +
-                     " \r\n  Case When e.Images IS NULL then '/Images/Hotels/BC25DCD2-0761-408C-8EF1-CAD88D937C47/hotel_room-t1.jpg' else e.Images end as  Images " +
+            strSQL = " \r\n select Top 2 a.HotelId,a.HotelName,b.Price,c.Content,a.Rate, " +
+                     " \r\n  Case When e.Images IS NULL then 'Images/Hotels/noImage.jpg' else e.Images end as  Images " +
                      " \r\n From Hotel a  join( " +
                      " \r\n select HotelId, Min(Price) as Price From CatergoryRooms " +
                      " \r\n group by HotelId " +

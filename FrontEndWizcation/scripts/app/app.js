@@ -4,7 +4,8 @@ angular.module('Wizcation', [
   'oc.lazyLoad',
   'pascalprecht.translate',
   'ngAutocomplete',
-  '720kb.datepicker'
+  '720kb.datepicker',
+  'ui.bootstrap'
 ])
 
 .run(
@@ -12,12 +13,6 @@ angular.module('Wizcation', [
     function ($rootScope, $state, $stateParams) {
      
 
-        if (localStorage.getItem('lang') == null) {
-          
-            localStorage.setItem('lang', "th");
-        } else {
-           
-        }
         // It's very handy to add references to $state and $stateParams to the $rootScope
         // so that you can access them from any scope within your applications.For example,
         // <li ng-class="{ active: $state.includes('contacts.list') }"> will set the <li>
@@ -148,7 +143,7 @@ angular.module('Wizcation', [
         prefix: '\Scripts/Lang/',
         suffix: '.json'
     })
-    $translateProvider.preferredLanguage(localStorage.getItem('lang'))
+    $translateProvider.preferredLanguage(localStorage.getItem('en'))
     $translateProvider.forceAsyncReload(true);
 
 
@@ -162,7 +157,9 @@ angular.module('Wizcation', [
     });
     $scope.langSelect =localStorage.getItem('lang');
     $scope.changeLanguage = function (lang) {
+        localStorage.setItem('lang', lang);
         $translate.use(lang);
         $scope.langSelect = lang;
     }
+
 }]);
