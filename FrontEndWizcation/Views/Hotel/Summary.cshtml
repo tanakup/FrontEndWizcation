@@ -1,0 +1,100 @@
+﻿
+@{
+    ViewBag.Title = "Summary";
+}
+<div ng-repeat="a in hotel_detail">
+    <p class="hpadding20">
+        {{a.Content}}
+    </p>
+    <div class="line4"></div>
+
+
+    <!-- Collapse 2 -->
+    <button type="button" class="collapsebtn2" data-toggle="collapse" data-target="#collapse2">
+        Restaurants Or Bar/Lounge <span class="collapsearrow"></span>
+    </button>
+
+    <div id="collapse2" class="collapse in">
+        <div class="hpadding20">
+            {{a.RestaurantDetail}}
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <!-- End of collapse 2 -->
+
+    <div class="line4"></div>
+
+    <!-- Collapse 3 -->
+    <button type="button" class="collapsebtn2 collapsed" data-toggle="collapse" data-target="#collapse3">
+        Complimentary Wi-Fi <span class="collapsearrow"></span>
+    </button>
+
+    <div id="collapse3" class="collapse in">
+        <div class="hpadding20" ng-if="a.ComplimentaryWiFi==1">
+            Yes
+        </div>
+        <div class="hpadding20"ng-if="a.ComplimentaryWiFi==0">
+            No
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <!-- End of collapse 3 -->
+
+    <div class="line4"></div>
+
+    <!-- Collapse 4 -->
+    <button type="button" class="collapsebtn2 collapsed" data-toggle="collapse" data-target="#collapse4">
+        Internet <span class="collapsearrow"></span>
+    </button>
+
+    <div id="collapse4" class="collapse in">
+        <div class="hpadding20" ng-if="a.IsInternet==1">
+            Yes
+        </div>
+        <div class="hpadding20" ng-if="a.IsInternet==0">
+            No
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <!-- End of collapse 4 -->
+
+    <div class="line4"></div>
+
+    <!-- Collapse 5 -->
+    <button type="button" class="collapsebtn2 collapsed" data-toggle="collapse" data-target="#collapse5">
+        Parking <span class="collapsearrow"></span>
+    </button>
+
+    <div id="collapse5" class="collapse in ">
+        <div class="hpadding20"  ng-if="a.IsParking==1">
+            Yes
+        </div>
+        <div class="hpadding20" ng-if="a.IsParking==0">
+            No
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <!-- End of collapse 5 -->
+
+    <div class="line4"></div>
+
+    <!-- Collapse 6 -->
+    <button type="button" class="collapsebtn2" data-toggle="collapse" data-target="#collapse6">
+        Room Amenities <span class="collapsearrow"></span>
+    </button>
+
+    <div id="collapse6" class="collapse in">
+        <div class="hpadding20">
+            <div class="col-md-4" >
+                <ul class="checklist" ng-repeat="b in amentities_mapping">
+                    <li>{{b.AmentitiesName}}</li>
+                    
+                </ul>
+            </div>
+            
+            
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <!-- End of collapse 6 -->
+</div>

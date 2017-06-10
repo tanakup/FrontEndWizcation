@@ -20,6 +20,14 @@ namespace FrontEndWizcation.Controllers.Hotel
         {
             return repository.ListHotel(id);
         }
+
+        //  api/ModuleHotel/ListHotel/:id
+        [HttpGet]
+        [ActionName("ViewDetailHotel")]
+        public DataSet GetViewDetailHotel(int id,string Lang)
+        {
+            return repository.ViewDetailHotel(id,Lang);
+        }
         //  api/ModuleHotel/ListHotelTop2/:id
         [HttpGet]
         [ActionName("ListHotelTop2")]
@@ -27,5 +35,14 @@ namespace FrontEndWizcation.Controllers.Hotel
         {
             return repository.ListHotelTop2(id);
         }
+
+        //  api/ModuleHotel/ListAcomodation
+        [HttpGet]
+        [ActionName("ListAcomodation")]
+        public DataSet GetListAcomodation()
+        {
+            return repository.ListAcomodation();
+        }
+        
     }
 }

@@ -4,14 +4,13 @@
 // INICTIALIZE CAROUSEL DETAILS PAGE
 // #################################
 
-		$(function() {
+jQuery(function ($) {
 			var $carousel = $('#carousel'),
 				$pager = $('#pager');
 
 			function getCenterThumb() {
 				var $visible = $pager.triggerHandler( 'currentVisible' ),
 					center = Math.floor($visible.length / 2);
-				
 				return center;
 			}
 
@@ -54,13 +53,14 @@
 				onCreate: function() {
 					var center = getCenterThumb();
 					$pager.trigger( 'slideTo', [ -center, { duration: 0 } ] );
-					$pager.find( 'img' ).eq( center ).addClass( 'selected' );
+					$pager.find('img').eq(center).addClass('selected');
 				}
 			});
 			$pager.find( 'img' ).click(function() {
 				var src = $(this).attr( 'src' );
 				src = src.split( '/small/' ).join( '/large/' );
-				$carousel.trigger( 'slideTo', [ 'img[src="'+ src +'"]' ] );
+				$carousel.trigger('slideTo', ['img[src="' + src + '"]']);
+				//console.log($carousel.trigger('slideTo', ['img[src="' + src + '"]']));
 			});
 		});
 

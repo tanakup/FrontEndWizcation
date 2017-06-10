@@ -1,0 +1,174 @@
+﻿{{
+  "slidesImage": [
+    {
+      "ImagesId": 1,
+      "Image": "https://q-ak.bstatic.com/images/hotel/max1024x768/243/24388030.jpg",
+      "FileName": "Room1",
+      "Type": "image/jpeg",
+      "CatergoryRoomsId": 1,
+      "IsDefault": 0,
+      "IsHotel": 0,
+      "HotelId": 1,
+      "CreateUserID": "6454f45d-5351-4464-b730-37059c0ba770",
+      "CreateDate": "2017-05-12T10:19:01.39",
+      "LastUpdateUserID": "6454f45d-5351-4464-b730-37059c0ba770",
+      "LastUpdate": "2017-05-12T10:19:01.39",
+      "IsDelete": false
+    },
+    {
+      "ImagesId": 2,
+      "Image": "https://r-ak.bstatic.com/images/hotel/max1024x768/248/24860299.jpg",
+      "FileName": "Room2",
+      "Type": "image/jpeg",
+      "CatergoryRoomsId": 1,
+      "IsDefault": 1,
+      "IsHotel": 1,
+      "HotelId": 1,
+      "CreateUserID": "6454f45d-5351-4464-b730-37059c0ba770",
+      "CreateDate": "2017-05-12T10:19:01.487",
+      "LastUpdateUserID": "6454f45d-5351-4464-b730-37059c0ba770",
+      "LastUpdate": "2017-05-12T10:19:01.487",
+      "IsDelete": false
+    },
+    {
+      "ImagesId": 3,
+      "Image": "https://q-ak.bstatic.com/images/hotel/max1024x768/248/24857266.jpg",
+      "FileName": "Room3",
+      "Type": "image/jpeg",
+      "CatergoryRoomsId": 1,
+      "IsDefault": 0,
+      "IsHotel": 0,
+      "HotelId": 1,
+      "CreateUserID": "6454f45d-5351-4464-b730-37059c0ba770",
+      "CreateDate": "2017-05-12T10:19:01.55",
+      "LastUpdateUserID": "6454f45d-5351-4464-b730-37059c0ba770",
+      "LastUpdate": "2017-05-12T10:19:01.55",
+      "IsDelete": false
+    },
+    {
+      "ImagesId": 4,
+      "Image": "https://r-ak.bstatic.com/images/hotel/max1024x768/248/24859078.jpg",
+      "FileName": "Room4",
+      "Type": "image/jpeg",
+      "CatergoryRoomsId": 2,
+      "IsDefault": 0,
+      "IsHotel": 0,
+      "HotelId": 1,
+      "CreateUserID": "6454f45d-5351-4464-b730-37059c0ba770",
+      "CreateDate": "2017-05-12T10:19:01.61",
+      "LastUpdateUserID": "6454f45d-5351-4464-b730-37059c0ba770",
+      "LastUpdate": "2017-05-12T10:19:01.61",
+      "IsDelete": false
+    },
+    {
+      "ImagesId": 5,
+      "Image": "https://r-ak.bstatic.com/images/hotel/max1024x768/269/26927157.jpg",
+      "FileName": "Room5",
+      "Type": "image/jpeg",
+      "CatergoryRoomsId": 2,
+      "IsDefault": 1,
+      "IsHotel": 0,
+      "HotelId": 1,
+      "CreateUserID": "6454f45d-5351-4464-b730-37059c0ba770",
+      "CreateDate": "2017-05-12T10:19:01.667",
+      "LastUpdateUserID": "6454f45d-5351-4464-b730-37059c0ba770",
+      "LastUpdate": "2017-05-12T10:19:01.667",
+      "IsDelete": false
+    },
+    {
+      "ImagesId": 6,
+      "Image": "https://q-ak.bstatic.com/images/hotel/max1024x768/248/24856990.jpg",
+      "FileName": "Room6",
+      "Type": "image/jpeg",
+      "CatergoryRoomsId": 2,
+      "IsDefault": 0,
+      "IsHotel": 0,
+      "HotelId": 1,
+      "CreateUserID": "6454f45d-5351-4464-b730-37059c0ba770",
+      "CreateDate": "2017-05-12T10:19:01.72",
+      "LastUpdateUserID": "6454f45d-5351-4464-b730-37059c0ba770",
+      "LastUpdate": "2017-05-12T10:19:01.72",
+      "IsDelete": false
+    }
+  ],
+  "roomslist": [
+    {
+      "HotelId": 1,
+      "countRoom": 4,
+      "CatergoryRoomsId": 1,
+      "CatergoryRoomsName": "Deluxe Suite with Spa Bath",
+      "Price": 2850.0,
+      "MaximunAllowingGuest": 2,
+      "Cancellation": 0,
+      "Cancellation_Remark": null,
+      "PayAt": null,
+      "Images": "https://r-ak.bstatic.com/images/hotel/max1024x768/248/24860299.jpg"
+    },
+    {
+      "HotelId": 1,
+      "countRoom": 2,
+      "CatergoryRoomsId": 2,
+      "CatergoryRoomsName": "Deluxe Suite with Pool Access",
+      "Price": 3200.0,
+      "MaximunAllowingGuest": 2,
+      "Cancellation": 0,
+      "Cancellation_Remark": null,
+      "PayAt": null,
+      "Images": "https://r-ak.bstatic.com/images/hotel/max1024x768/269/26927157.jpg"
+    }
+  ],
+  "amentities_mapping": [
+    {
+      "AmentitiesId": 1,
+      "HotelId": 1,
+      "AmentitiesId1": 1,
+      "AmentitiesIcon": null,
+      "AmentitiesName": "Climate control",
+      "IsDelete": 0
+    },
+    {
+      "AmentitiesId": 2,
+      "HotelId": 1,
+      "AmentitiesId1": 2,
+      "AmentitiesIcon": null,
+      "AmentitiesName": "Air conditioning",
+      "IsDelete": 0
+    },
+    {
+      "AmentitiesId": 3,
+      "HotelId": 1,
+      "AmentitiesId1": 3,
+      "AmentitiesIcon": null,
+      "AmentitiesName": "Direct-dial phone",
+      "IsDelete": 0
+    },
+    {
+      "AmentitiesId": 4,
+      "HotelId": 1,
+      "AmentitiesId1": 4,
+      "AmentitiesIcon": null,
+      "AmentitiesName": "Minibar",
+      "IsDelete": 0
+    }
+  ],
+  "hotel_detail": [
+    {
+      "HotelDetailID": 1,
+      "HotelId": 1,
+      "ComplimentaryWiFi": 1,
+      "IsInternet": 1,
+      "IsParking": 1,
+      "IsRestaurants": 1,
+      "RestaurantDetail": "\"à¸¡à¸µà¸£à¹‰à¸²à¸™à¸­à¸²à¸«à¸²à¸£à¸šà¸¸à¸Ÿà¹€à¸Ÿà¹ˆà¸•à¹Œà¸ à¸²à¸¢à¹ƒà¸™à¹‚à¸£à¸‡à¹à¸£à¸¡\"",
+      "DescriptionId": 2,
+      "Content": "Lotus Villas & Resort HuaHin features a 40 m long and 1.7 m deep outdoor pool and a fitness centre. It offers guestrooms and private villas with modern facilities with either a spa bath or a private pool. Free WiFi is available throughout the resort. The property provides free scheduled shuttle service to Hua Hin Centre, Hua Hin Beach and Clock Tower. Hua Hin Night Market is within a 15-minute drive from Lotus Villas & Resort. It is a 20-minute drive from Floating Market and Black Mountain Water Park. Bangkok City is a 3-hoursâ€™ ride away. Spacious villas offer modern interiors, a flat-screen TV with a DVD player and a seating area with a sofa. A kitchen and a dining area are included as well as an en suite bathroom. Barbecue facilities are also available for small get-togethers and an outdoor dining experience. The suites come with air conditioning, a comfortable sofa set and a private bathroom. Guests can relax on the poolside sun loungers, or enjoy pampering massage treatments at the spa. For convenience, the residence offers a tour desk, motorbikes and cars rental services. There is also a salon and convenient store. We speak your language! Lotus Villas & Resort HuaHin has been welcoming Booking.com guests since 28 Aug 2012 Currency exchange: Need local currency? This property offers currency exchange on site.",
+      "LanguageId": 2,
+      "HotelId1": 1,
+      "CreateUserID": "6454f45d-5351-4464-b730-37059c0ba770",
+      "CreateDate": "2017-05-12T10:19:02.487",
+      "LastUpdateUserID": "6454f45d-5351-4464-b730-37059c0ba770",
+      "LastUpdate": "2017-05-12T10:19:02.487",
+      "IsDelete": false
+    }
+  ]
+}

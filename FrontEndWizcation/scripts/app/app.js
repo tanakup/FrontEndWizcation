@@ -4,19 +4,23 @@ angular.module('Wizcation', [
   'oc.lazyLoad',
   'pascalprecht.translate',
   'ngAutocomplete',
-  '720kb.datepicker'
+  '720kb.datepicker',
+  'ui.bootstrap',
+  'ngAnimate',
+  'ngTouch',
+  'vsGoogleAutocomplete',
 ])
 
 .run(
   ['$rootScope', '$state', '$stateParams',
     function ($rootScope, $state, $stateParams) {
      
+        if (localStorage.getItem('lang') == undefined) {
 
-        if (localStorage.getItem('lang') == null) {
-          
-            localStorage.setItem('lang', "th");
+            localStorage.setItem('lang', 'th');
         } else {
-           
+
+
         }
         // It's very handy to add references to $state and $stateParams to the $rootScope
         // so that you can access them from any scope within your applications.For example,
@@ -78,7 +82,10 @@ angular.module('Wizcation', [
                          return $ocLazyLoad.load([
                               {
                                   name: 'Hotel',
-                                  files: ['scripts/app/Hotel.js']
+                                  files: [
+                                      'scripts/app/HotelDetails.js',
+                                      
+                                  ]
                               },
                          ])
                      }]
@@ -109,10 +116,10 @@ angular.module('Wizcation', [
                resolve: {
                    lazyLoad: ['$ocLazyLoad', function ($ocLazyLoad) {
                        return $ocLazyLoad.load([
-                            {
-                                name: 'PrivatePolicy',
-                                files: ['scripts/app/Hotel.js']
-                            },
+                            //{
+                            //    name: 'PrivatePolicy',
+                            //    files: ['scripts/app/Hotel.js']
+                            //},
                        ])
                    }]
                }
@@ -128,15 +135,43 @@ angular.module('Wizcation', [
               resolve: {
                   lazyLoad: ['$ocLazyLoad', function ($ocLazyLoad) {
                       return $ocLazyLoad.load([
-                           {
-                               name: 'PrivatePolicy',
-                               files: ['scripts/app/Hotel.js']
-                           },
+                           //{
+                           //    name: 'PrivatePolicy',
+                           //    files: ['scripts/app/Hotel.js']
+                           //},
                       ])
                   }]
               }
           })
-        
+         .state('Contact', {
+             url: "/Contact",
+             templateUrl: '\Home/Contact',
+             resolve: {
+                 lazyLoad: ['$ocLazyLoad', function ($ocLazyLoad) {
+                     return $ocLazyLoad.load([
+                          //{
+                          //    name: 'PrivatePolicy',
+                          //    files: ['scripts/app/Hotel.js']
+                          //},
+                     ])
+                 }]
+             }
+         })
+              .state('Payment', {
+                  url: "/hotel/hotel_detail/payment/",
+                  templateUrl: '\Hotel/Payment',
+                  resolve: {
+                      lazyLoad: ['$ocLazyLoad', function ($ocLazyLoad) {
+                          return $ocLazyLoad.load([
+                               //{
+                               //    name: 'PrivatePolicy',
+                               //    files: ['scripts/app/Hotel.js']
+                               //},
+                          ])
+                      }]
+                  }
+              })
+
     }
   ]
 )
@@ -148,7 +183,7 @@ angular.module('Wizcation', [
         prefix: '\Scripts/Lang/',
         suffix: '.json'
     })
-    $translateProvider.preferredLanguage(localStorage.getItem('lang'))
+    $translateProvider.preferredLanguage(localStorage.getItem('en'))
     $translateProvider.forceAsyncReload(true);
 
 
@@ -162,7 +197,9 @@ angular.module('Wizcation', [
     });
     $scope.langSelect =localStorage.getItem('lang');
     $scope.changeLanguage = function (lang) {
+        localStorage.setItem('lang', lang);
         $translate.use(lang);
         $scope.langSelect = lang;
     }
+
 }]);

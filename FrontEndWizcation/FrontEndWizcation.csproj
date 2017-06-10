@@ -135,19 +135,23 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\css\page.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="Content\style.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Images\Hotels\BC25DCD2-0761-408C-8EF1-CAD88D937C47\hotel_room-t1.jpg" />
     <Content Include="Images\Hotels\BC25DCD2-0761-408C-8EF1-CAD88D937C47\hotel_room-t2.jpg" />
+    <Content Include="Images\Hotels\noImage.jpg" />
     <Content Include="Images\Wallpaper\hotel1.jpg" />
     <Content Include="Images\Wallpaper\hotel2.jpg" />
     <Content Include="Images\Wallpaper\hotel3.jpg" />
     <Content Include="Images\Wallpaper\Travel.jpg" />
     <Content Include="scripts\ai.0.15.0-build58334.js" />
     <Content Include="scripts\ai.0.15.0-build58334.min.js" />
+    <Content Include="scripts\angular_libary\angular-animate.min.js" />
     <Content Include="scripts\angular_libary\angular-datepicker\css\angular-datepicker.css" />
     <Content Include="scripts\angular_libary\angular-datepicker\js\angular-datepicker.js" />
     <Content Include="scripts\angular_libary\angular-sanitize.min.js" />
+    <Content Include="scripts\angular_libary\angular-touch.min.js" />
     <Content Include="scripts\angular_libary\angular-translate-loader-static-files.min.js" />
     <Content Include="scripts\angular_libary\angular-translate-storage-local.min.js" />
     <Content Include="scripts\angular_libary\angular-translate.min.js" />
@@ -883,6 +887,7 @@
     <Content Include="scripts\angular_libary\i18n\angular-locale_zu-za.js" />
     <Content Include="scripts\angular_libary\i18n\angular-locale_zu.js" />
     <Content Include="scripts\angular_libary\angular-google-maps.min.js" />
+    <Content Include="scripts\angular_libary\vs-google-autocomplete.js" />
     <Content Include="scripts\app\app.js" />
     <Content Include="scripts\app\Hotel.js" />
     <Content Include="scripts\app\HotelDetails.js" />
@@ -890,6 +895,7 @@
     <Content Include="scripts\bootstrap.js" />
     <Content Include="scripts\bootstrap.min.js" />
     <None Include="Properties\PublishProfiles\Wiz.pubxml" />
+    <Content Include="scripts\app\data.json" />
     <None Include="scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="scripts\component\dist\modules\ocLazyLoad.core.js" />
     <Content Include="scripts\component\dist\modules\ocLazyLoad.directive.js" />
@@ -906,8 +912,10 @@
     <Content Include="scripts\component\dist\ocLazyLoad.require.min.js" />
     <Content Include="scripts\jquery-1.10.2.js" />
     <Content Include="scripts\jquery-1.10.2.min.js" />
+    <Content Include="scripts\jquery-3.2.1.js" />
     <Content Include="scripts\Lang\th.json" />
     <Content Include="scripts\modernizr-2.6.2.js" />
+    <Content Include="scripts\ui-bootstrap-tpls-2.5.0.min.js" />
     <Content Include="Template\assets\css\custom.css" />
     <Content Include="Template\assets\css\dashboard.css" />
     <Content Include="Template\assets\css\docs.css" />
@@ -1578,6 +1586,12 @@
     <Content Include="Views\Home\PartnerJoin.cshtml" />
     <Content Include="Views\Home\SiteMap.cshtml" />
     <Content Include="Views\Home\LogInMyAccount.cshtml" />
+    <Content Include="Views\Hotel\Summary.cshtml" />
+    <Content Include="Views\Hotel\RoomRates.cshtml" />
+    <Content Include="Views\Hotel\Preferences.cshtml" />
+    <Content Include="Views\Hotel\Reviews.cshtml" />
+    <Content Include="Views\Hotel\Thingstodo.cshtml" />
+    <Content Include="Views\Hotel\Payment.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

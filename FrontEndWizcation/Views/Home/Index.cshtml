@@ -33,8 +33,11 @@
     <link rel="stylesheet" href="~/Template/plugins/jslider/css/jslider.round.css" type="text/css">
 
     <link href="~/scripts/angular_libary/angular-datepicker/css/angular-datepicker.css" rel="stylesheet" />
+
     <!-- jQuery-->
-    <script src="~/Template/assets/js/jquery.v2.0.3.js"></script>
+    @*<script src="~/Template/assets/js/jquery.v2.0.3.js"></script>*@
+    <script src="~/scripts/jquery-3.2.1.js"></script>
+
     <!-- bin/jquery.slider.min.js -->
     <script type="text/javascript" src="~/Template/plugins/jslider/js/jshashtable-2.1_src.js"></script>
     <script type="text/javascript" src="~/Template/plugins/jslider/js/jquery.numberformatter-1.2.3.js"></script>
@@ -43,22 +46,21 @@
     <script type="text/javascript" src="~/Template/plugins/jslider/js/draggable-0.1.js"></script>
     <script type="text/javascript" src="~/Template/plugins/jslider/js/jquery.slider.js"></script>
     <!-- end -->
+
 </head>
-<body id="top" ng-controller="Hotel">
+<body id="top" ng-controller="Hotel" class="thebg">
 
     @Html.Partial("Header")
     <!-- WRAP -->
 
     <ui-view></ui-view>
-  
+
     @*<script src="~/Template/assets/js/js-details.js"></script>*@
-     @*Javascript *@
-   
+    @*Javascript *@
+
     <!-- Googlemap -->
     <script src="~/Template/assets/js/initialize-google-map.js"></script>
-   
-    <!-- This page JS -->
-    <script src="~/Template/assets/js/js-index.js"></script>
+
 
     <!-- Custom functions -->
     <script src="~/Template/assets/js/functions.js"></script>
@@ -72,7 +74,7 @@
     <!-- jQuery KenBurn Slider  -->
     <script type="text/javascript" src="~/Template/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
 
-  
+
     <!-- CarouFredSel -->
     <script src="~/Template/assets/js/jquery.carouFredSel-6.2.1-packed.js"></script>
     <script src="~/Template/assets/js/helper-plugins/jquery.touchSwipe.min.js"></script>
@@ -81,10 +83,10 @@
 
     <!-- Carousel-->
     <script src="~/Template/assets/js/initialize-carousel-detailspage.js"></script>
-  
-     @*Easing 
-    <script src="~/Template/assets/js/jquery.easing.js"></script>*@
 
+    @*Easing
+        <script src="~/Template/assets/js/jquery.easing.js"></script>*@
+    <script src="~/Template/assets/js/jquery.easing.js"></script>
     <!-- Custom Select -->
     <script type='text/javascript' src='~/Template/assets/js/jquery.customSelect.js'></script>
 
@@ -97,24 +99,28 @@
     <script src="~/Template/dist/js/bootstrap.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAB058VdJ1Ru8T7ybwp3WVD4bwqQZk20FA&libraries=places"></script>
 
-    
+
 
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="~/Template/dist/js/bootstrap.min.js"></script>
     <script src="~/scripts/angular_libary/angular.min.js"></script>
     <script src="~/scripts/angular_libary/angular-sanitize.min.js"></script>
+    <script src="~/scripts/angular_libary/angular-touch.min.js"></script>
+    <script src="~/scripts/angular_libary/angular-animate.min.js"></script>
     <script src="~/scripts/angular_libary/angular-ui-router.min.js"></script>
+    <script src="~/scripts/ui-bootstrap-tpls-2.5.0.min.js"></script>
     <script src="~/scripts/component/dist/ocLazyLoad.min.js"></script>
     <script src="~/scripts/angular_libary/angular-translate.min.js"></script>
     <script src="~/scripts/angular_libary/angular-translate-loader-static-files.min.js"></script>
     <script src="http://jvandemo.github.io/angularjs-google-maps/dist/angularjs-google-maps.js"></script>
     <script src="~/Template/plugins/autocomplete/ngAutocomplete.js"></script>
     <script src="~/scripts/angular_libary/angular-datepicker/js/angular-datepicker.js"></script>
+    <script src="~/scripts/angular_libary/vs-google-autocomplete.js"></script>
     <script src="~/scripts/app/app.js"></script>
     <script src="~/scripts/app/Hotel.js"></script>
     <script src="~/scripts/Lang/en.json"></script>
     <script src="~/scripts/Lang/th.json"></script>
-  
-   
+
+
 </body>
 </html>
