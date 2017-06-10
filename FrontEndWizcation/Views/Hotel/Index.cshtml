@@ -79,51 +79,28 @@
 
             <div class="line2"></div>
 
-            <!-- Price range -->
-
-            @*<button type="button" class="collapsebtn" data-toggle="collapse" data-target="#collapse2">
-                Price range <span class="collapsearrow"></span>
-            </button>
-
-            <div id="collapse2" class="collapse in">
-                <div class="padding20">
-                    <div class="layout-slider wh100percent">
-                        <span class="cstyle09"><input id="Slider1" type="slider" name="price" value="400;700" /></span>
-                    </div>
-                    <script type="text/javascript">
-						  jQuery("#Slider1").slider({ from: 100, to: 1000, step: 5, smooth: true, round: 0, dimension: "&nbsp;$", skin: "round" });
-                    </script>
-                </div>
-            </div>*@
-            <!-- End of Price range -->
-
-            <div class="line2"></div>
-
             <!-- Acomodations -->
             <button type="button" class="collapsebtn" data-toggle="collapse" data-target="#collapse3">
                 Acomodation type <span class="collapsearrow"></span>
             </button>
             <div id="collapse3" class="collapse in">
                 <div class="hpadding20">
-                  
-                    <div class="radio" ng-repeat="a in acomodationtype">
-                  
+                    <div class="radio" data-ng-repeat="a in acomodationtype">
                         <label>
-
-                            <input type="radio" ng-model="lookup" value="{{a.AcomodationTypeId}}">{{a.AcomodationTypeName}}</input>
-                         
-                          
+                            <input name="currentActivity"
+                                   type="radio"
+                                   value="{{a.AcomodationTypeId}}"
+                                   ng-model="$parent.search.AcomodationTypeIds" />
+                            {{a.AcomodationTypeName}}
                         </label>
-                       
                     </div>
-               
-                </div>
+           </div>
                 <div class="clearfix"></div>
             </div>
             <!-- End of Acomodations -->
 
             <div class="line2"></div>
-
+            {{form.amentitiesId}}
             <!-- Hotel Preferences -->
             <button type="button" class="collapsebtn last" data-toggle="collapse" data-target="#collapse4">
                 Amentities <span class="collapsearrow"></span>
@@ -132,18 +109,16 @@
                 <div class="hpadding20">
                     <div class="checkbox" ng-repeat="b in amentities">
                         <label>
-                            <input type="checkbox" >{{b.AmentitiesName}}
+                            <input name="amentities{{b.AmentitiesId}}" type="checkbox" ng-model="$parent.form.amentitiesId" ng-value="{{b.AmentitiesId}}"> {{b.AmentitiesName}}
                         </label>
-                    </div>
-                  
 
+
+                    </div>
                 </div>
                 <div class="clearfix"></div>
             </div>
             <!-- End of Hotel Preferences -->
-
             <div class="line2"></div>
-
             <!-- Hotel Preferences -->
             <button type="button" class="collapsebtn last" data-toggle="collapse" data-target="#collapse5">
                 Facilities <span class="collapsearrow"></span>
@@ -181,7 +156,7 @@
                         <div class="left mt7"><b>Sort by:</b></div>
 
                         <div class="right wh70percent">
-                            
+
                             <select class="form-control mySelectBoxClass " ng-model="sortHotelName">
                                 <option value>-- Hotel Name --</option>
                                 <option value="HotelName">A to Z</option>
@@ -205,7 +180,7 @@
                         </div>
                         <div class="w50percentlast">
                             <div class="wh90percent">
-                                <select class="form-control mySelectBoxClass "  ng-model="sortPrice">
+                                <select class="form-control mySelectBoxClass " ng-model="sortPrice">
                                     <option value>-- Price --</option>
                                     <option value="Price">Ascending</option>
                                     <option value="-Price">Descending</option>
@@ -231,7 +206,7 @@
 
             <div class="itemscontainer offset-1">
 
-                <div class="col-md-4"  ng-repeat="n in ListHotel.slice(((currentPage-1)*itemsPerPage), ((currentPage)*itemsPerPage))| filter:search:false||undefined |orderBy : [sortHotelName,'-Price']">
+                <div class="col-md-4" ng-repeat="n in ListHotel.slice(((currentPage-1)*itemsPerPage), ((currentPage)*itemsPerPage))| filter:search:false||undefined |orderBy : [sortHotelName,sortPrice]">
                     <div class="listitem">
                         <img src="{{n.Images}}" alt="" />
                         <div class="liover"></div>
@@ -243,7 +218,7 @@
                             <img src="\Template/images/filter-rating-{{n.Rate}}.png" width="60" alt="" /><br /><br /><br />
                             <img src="\Template/images/user-rating-{{n.Rate}}.png" width="60" alt="" /><br />
                             <span class="size11 grey">18 Reviews</span><br /><br />
-                            <span class="green size18" ><b ng-bind="n.Price"> </b></span><br />
+                            <span class="green size18"><b> {{n.Price}}</b></span><br />
                             <span class="size11 grey">avg/night</span><br /><br /><br />
                             <button class="bookbtn mt1" ui-sref="HotelDetail({ID:{{n.HotelId}}})">Book</button>
                         </div>

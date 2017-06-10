@@ -1,6 +1,5 @@
 ﻿angular.module("Wizcation").controller("Hotel", function ($http, $scope, $translate) {
     $scope.header = "";
-    
     $http.get("api/moduleHotel/ListHotelTop2/0").then(function (response) {
         $scope.header = response.data;
         $scope.ListDeals= $scope.header.hotels;
@@ -10,7 +9,7 @@
         $scope.totalItems = $scope.ListHotel.length;
     });
 
-    $http.get(" api/ModuleHotel/ListAcomodation").then(function (response) {
+    $http.get("api/ModuleHotel/ListAcomodation").then(function (response) {
         $scope.acomodationtype = response.data.acomodationtype;
         $scope.amentities = response.data.amentities;
         $scope.facilities = response.data.facilities;
@@ -34,6 +33,26 @@
         $scope.itemsPerPage = num;
         $scope.currentPage = 1; //reset to first paghe
     }
-    
+
+    $scope.address = {
+        name: '',
+        place: '',
+        components: {
+            placeId: '',
+            streetNumber: '',
+            street: '',
+            city: '',
+            state: '',
+            countryCode: '',
+            country: '',
+            postCode: '',
+            district: '',
+            location: {
+                lat: '',
+                long: ''
+            }
+        }
+    };
+
     $scope.lookup = 1;
 });

@@ -1,0 +1,133 @@
+﻿
+@{
+    ViewBag.Title = "RoomRates";
+}
+<div class="hpadding20">
+    <p class="dark">Your travel rates</p>
+    <div class="col-md-4 offset-0">
+        <div class="w50percent">
+            <div class="wh90percent textleft">
+                <span class="opensans size13"><b translate="checkin"></b></span>
+                <datepicker date-format="yyyy-MM-dd" selector="form-control">
+                    <div class="input-group">
+                        <input type="text" class="form-control mySelectCalendar" id="datepicker" placeholder="{{'format_date'|translate}}" />
+                    </div>
+                </datepicker>
+            </div>
+        </div>
+
+        <div class="w50percentlast">
+            <div class="wh90percent textleft right">
+                <span class="opensans size13"><b translate="checkout"></b></span>
+                <datepicker date-format="yyyy-MM-dd" selector="form-control">
+                    <div class="input-group">
+                        <input type="text" class="form-control mySelectCalendar" id="datepicker2" placeholder="{{'format_date'|translate}}" />
+                    </div>
+                </datepicker>
+            </div>
+            </div>
+    </div>
+    <div class="col-md-8 offset-0">
+        <div class="col-md-8 ">
+            <div class="room1">
+                <div class="w50percent">
+                    <div class="wh90percent textleft">
+                        <span class="opensans size13"><b translate="room"></b></span><br />
+                        <select class="form-control mySelectBoxClass">
+                            <option selected>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                      
+                    </div>
+                </div>
+
+                <div class="w50percentlast">
+                    <div class="wh90percent textleft right ohidden">
+                        <div class="w50percent">
+                            <div class="wh90percent textleft left">
+                                <span class="opensans size13"><b translate="adult"></b></span>
+                                <select class="form-control mySelectBoxClass">
+                                    <option>1</option>
+                                    <option selected>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                    <option>7</option>
+                                    <option>8</option>
+                                    <option>9</option>
+                                    <option>10</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="w50percentlast">
+                            <div class="wh90percent textleft right ohidden">
+                                <span class="opensans size13"><b  translate="child"></b></span>
+                                <select class="form-control mySelectBoxClass">
+                                    <option selected>0</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-md-4 center offset-0">
+            <button class="updatebtn caps center margtop20">{{'search'|translate}}</button>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+</div>
+<br />
+
+<p class="hpadding20 dark">Room type</p>
+
+<div class="line2"></div>
+
+<div class="padding20" ng-repeat="n in roomslist">
+    <div class="col-md-4 offset-0">
+        <a href="#"><img src="{{n.Images}}" alt="" class="fwimg" /></a>
+    </div>
+    <div class="col-md-8 offset-0">
+        <div class="col-md-8 mediafix1">
+            <h4 class="opensans dark bold margtop1 lh1" ng-bind="n.CatergoryRoomsName"></h4>
+            Max Occupancy: {{n.MaximunAllowingGuest}} adults
+            <ul class="hotelpreferences margtop10">
+                <li class="icohp-internet"></li>
+                <li class="icohp-air"></li>
+                <li class="icohp-pool"></li>
+                <li class="icohp-childcare"></li>
+                <li class="icohp-fitness"></li>
+                <li class="icohp-breakfast"></li>
+                <li class="icohp-parking"></li>
+            </ul>
+            <div class="clearfix"></div>
+            <ul class="checklist2 margtop10">
+                <li ng-if="n.Cancellation==0">FREE Cancellation</li>
+                <li ng-if="n.Cancellation==1">{{n.Cancellation_Remark}}</li>
+                @*<li>{{PayAt}} </li>*@
+            </ul>
+        </div>
+        <div class="col-md-4 center bordertype4">
+            <span class="opensans orange size24">{{n.Price}}</span><br />
+            <span class="opensans lightgrey size12">avg/night</span><br /><br />
+            <span class="lred bold">{{n.countRoom}} left</span><br /><br />
+            <a class="bookbtn mt1" ui-sref="Payment">Book</a>
+            
+        </div>
+    </div>
+    <div class="clearfix"></div>
+</div>
+<div class="line2"></div>
+
+

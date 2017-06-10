@@ -22,7 +22,7 @@
                     <ul class="nav navbar-nav navbar-right no-user-select">
                         <li ng-class="{active: $state.includes('Home')}"><a ui-sref="Home" translate="home"></a></li>
                         <li ng-class="{active: $state.includes('Hotel')}"><a ui-sref="Hotel" translate="hotel"></a></li>
-                        <li ng-class="{active: $state.includes('Activities')}"><a ui-sref="Activities" translate="activities"></a></li>
+                        <li  ng-hide="true" ng-class="{active: $state.includes('Activities')}"><a ui-sref="Activities" translate="activities"></a></li>
                         <li class="dropdown cursor-pointer" ng-controller="translateController">
                             <a data-toggle="dropdown" class="dropdown-toggle" translate="{{langSelect}}"><b class="lightcaret mt-2"></b></a>
                             <ul class="dropdown-menu posright-0">
