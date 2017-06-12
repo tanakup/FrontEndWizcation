@@ -35,35 +35,20 @@
                     <div id="inner">
                         <div id="caroufredsel_wrapper2">
                             <div id="carousel">
-                                <img src='https://q-ak.bstatic.com/images/hotel/max1024x768/243/24388030.jpg' />
-                                <img src='https://r-ak.bstatic.com/images/hotel/max1024x768/248/24860299.jpg' />
-                                <img src='https://q-ak.bstatic.com/images/hotel/max1024x768/248/24857266.jpg' />
-                                <img src='https://r-ak.bstatic.com/images/hotel/max1024x768/248/24859078.jpg' />
-                                <img src='https://r-ak.bstatic.com/images/hotel/max1024x768/269/26927157.jpg' />
-                                <img src='https://q-ak.bstatic.com/images/hotel/max1024x768/248/24856990.jpg' />
                             </div>
                         </div>
                         <div id="pager-wrapper">
                             <div id="pager">
-                                <img src='https://q-ak.bstatic.com/images/hotel/max1024x768/243/24388030.jpg' />
-                                <img src='https://r-ak.bstatic.com/images/hotel/max1024x768/248/24860299.jpg' />
-                                <img src='https://q-ak.bstatic.com/images/hotel/max1024x768/248/24857266.jpg' />
-                                <img src='https://r-ak.bstatic.com/images/hotel/max1024x768/248/24859078.jpg' />
-                                <img src='https://r-ak.bstatic.com/images/hotel/max1024x768/269/26927157.jpg' />
-                                <img src='https://q-ak.bstatic.com/images/hotel/max1024x768/248/24856990.jpg' />
                                 <script>
                                     $.get("api/ModuleHotel/ViewDetailHotel/1?Lang=en", function (data) {
-                                        var items = [];
-                                        var str = "";
 
                                         $.each(data.slidesImage, function (key, val) {
-                                            str += "<img  src='" + val.Image + "'/>";
-                                            //   items.push("<img  src='" + val.Image + "'/>");
-                                            //   $("<img>").attr("src", val.Image).appendTo('div[id="pager"]');
+                                            console.log("key => " + key + ",value => " + val.Image);
+                                            $('#carousel').prepend('<img src="' + val.Image + '" />');
+                                            $('#pager').prepend('<img src="' + val.Image + '" width="120" height="68" alt=""  />');
                                         });
-                                        console.log(str);
-                                        $("#pager").append(str);
                                     });
+
                                 </script>
                             </div>
 
@@ -78,8 +63,8 @@
         </div>
         <script>
 
-            $('#carousel').prepend('<img src="https://r-ak.bstatic.com/images/hotel/max1024x768/269/26927157.jpg" />');
-            $('#pager').prepend('<img src="https://r-ak.bstatic.com/images/hotel/max1024x768/269/26927157.jpg" width="120" height="68" alt=""  />');
+            //$('#carousel').prepend('<img src="https://r-ak.bstatic.com/images/hotel/max1024x768/269/26927157.jpg" />');
+            //$('#pager').prepend('<img src="https://r-ak.bstatic.com/images/hotel/max1024x768/269/26927157.jpg" width="120" height="68" alt=""  />');
         </script>
         <!-- END OF SLIDER -->
         <!-- RIGHT INFO -->
