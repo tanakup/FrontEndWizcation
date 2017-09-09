@@ -1384,6 +1384,8 @@
     <Content Include="Template\images\user-rating-4.png" />
     <Content Include="Template\images\user-rating-5.png" />
     <Content Include="Template\images\user.png" />
+    <Content Include="Template\images\wiz_logo.gif" />
+    <Content Include="Template\images\wiz_logo_1.jpg" />
     <Content Include="Template\js\affix.js" />
     <Content Include="Template\js\alert.js" />
     <Content Include="Template\js\button.js" />
